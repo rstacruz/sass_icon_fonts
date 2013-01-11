@@ -3,10 +3,10 @@ Sass icon fonts
 
 Sass 3.2 integration for modern icon webfonts.
 
- * [Entypo] (native at 40px)
- * [Entypo Social][Entypo]
- * [Font Awesome] (native at 14px)
- * [Typicons] (native at 24px)
+ * [Entypo] (241 icons, Daniel Bruce, SIL license, native at 40px)
+ * [Entypo Social][Entypo] (46 icons)
+ * [Font Awesome] (249 icons, Dave Gandy, CC BY 3.0, native at 14px)
+ * [Typicons] (88 icons, Stephen Hutchings, CC BY-SA 3.0, native at 24px)
 
 Why is it needed?
 -----------------
@@ -16,10 +16,22 @@ defines all the classes in one giant file.
 
 Me, I prefer to not have them in my CSS files unless I need them.
 
-This project provides mixins like so:
+Usage
+-----
 
-    +fa-icon(music, 24px)
+First, include the font-face definition somewhere like so:
+
+    @import font-awesome
+    +fa-font
+
+Then use the `*-icon` mixin:
+
+    button.add
+      +fa-icon(plus, 24px)
+
+See the individual files for more info.
 
 [Font Awesome]: http://fortawesome.github.com/Font-Awesome/
 [Entypo]: http://www.entypo.com/
+[Typicons]: http://typicons.com/
 
