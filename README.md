@@ -8,6 +8,10 @@ Sass 3.2 integration for modern icon webfonts.
  * [Font Awesome] (249 icons, Dave Gandy, CC BY 3.0, native at 14px)
  * [Typicons] (88 icons, Stephen Hutchings, CC BY-SA 3.0, native at 24px)
 
+[Font Awesome]: http://fortawesome.github.com/Font-Awesome/
+[Entypo]: http://www.entypo.com/
+[Typicons]: http://typicons.com/
+
 Why is it needed?
 -----------------
 
@@ -21,17 +25,42 @@ Usage
 
 First, include the font-face definition somewhere like so:
 
-    @import font-awesome
-    +fa-font
+``` sass
+@import font-awesome
++fa-font
+```
 
 Then use the `*-icon` mixin:
 
-    button.add
-      +fa-icon(plus, 24px)
+``` sass
+button.add
+  +fa-icon(plus, 24px)
+```
+
+Mixin usage
+-----------
+
+Each of the files provides a `*-icon` mixin:
+
+``` sass
++fa-icon(music)
++fa-icon(music, 24px)        /* 24px size */
+```
+
+It also accepts some keyed arguments. You can mix and match these together.
+
+``` sass
++fa-icon(music, 24px, $color: #333)
++fa-icon(music, 24px, $margin: 3px)    /* Margin-right */
++fa-icon(music, 24px, $shadow: 0 1px 1px rgba(black, 0.2))    /* Text shadow */
+```
+
+You may also specify a `$top` value to compensate for any mis-alignment.
+This nudges the icon by that many pixels from the top.
+
+``` sass
++fa-icon(music, 24px, $top: 2px)
+```
 
 See the individual files for more info.
-
-[Font Awesome]: http://fortawesome.github.com/Font-Awesome/
-[Entypo]: http://www.entypo.com/
-[Typicons]: http://typicons.com/
 
