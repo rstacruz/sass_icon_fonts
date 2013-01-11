@@ -1,0 +1,160 @@
+// Website:
+//   http://www.entypo.com/
+//   http://www.entypo.com/characters/
+//
+// Font files:
+//   http://www.entypo.com/css/entypo-social.eot
+//   http://www.entypo.com/css/entypo-social.svg
+//   http://www.entypo.com/css/entypo-social.woff
+//   http://www.entypo.com/css/entypo-social.ttf
+
+$ens-path: 'entypo-social' !default
+
+= ens-font
+  @font-face
+    font-family: 'entypo-social'
+    src: url('#{$ens-path}.eot')
+    src: url('#{$ens-path}.eot?#iefix') format("embedded-opentype"), url('#{$ens-path}.woff') format("woff"), url('#{$ens-path}.ttf') format("truetype"), url('#{$ens-path}.svg#entypo-social') format("svg")
+    font-weight: normal
+    font-style: normal
+
+// Uses a given icon.
+//
+//     +ens-icon(music)
+//     +ens-icon(music, 24px)        /* 24px size */
+//     +ens-icon(music, 32px, 10px)  /* 24px size, 10px margin right */
+//
+// You may specify a color.
+//
+//     +ens-icon(music, $color: #333)
+//
+// You may also specify a `$top` value to compensate for any mis-alignment.
+// This nudges the icon by that many pixels from the top.
+//
+//     +ens-icon(music, $top: 2px)
+//
+= ens-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
+  @extend %ens-icon
+
+  &:before
+    @if $margin != auto
+      margin-right: $margin
+    @if $size != auto
+      font-size: $size
+    @if $top != auto
+      position: relative
+      top: $top
+    @if $color != auto
+      color: $color
+    @if $shadow != none
+      text-shadow: $shadow
+
+  +ens-glyph($type)
+
+= ens-glyph($type)
+  @extend %ens-#{$type}
+
+%ens-icon
+  &:before
+    line-height: 1em
+    font-family: 'entypo-social'
+    font-weight: normal
+    font-style: normal
+    display: inline-block
+    text-decoration: none
+    vertical-align: middle
+    text-rendering: optimizeLegibility !important
+    -webkit-font-smoothing: antialiased !important
+
+%ens-github:before
+  content: "\F300"
+%ens-c-github:before
+  content: "\F301"
+%ens-flickr:before
+  content: "\F303"
+%ens-c-flickr:before
+  content: "\F304"
+%ens-vimeo:before
+  content: "\F306"
+%ens-c-vimeo:before
+  content: "\F307"
+%ens-twitter:before
+  content: "\F309"
+%ens-c-twitter:before
+  content: "\F30A"
+%ens-facebook:before
+  content: "\F30C"
+%ens-c-facebook:before
+  content: "\F30D"
+%ens-s-facebook:before
+  content: "\F30E"
+%ens-google+:before
+  content: "\F30F"
+%ens-c-google+:before
+  content: "\F310"
+%ens-pinterest:before
+  content: "\F312"
+%ens-c-pinterest:before
+  content: "\F313"
+%ens-tumblr:before
+  content: "\F315"
+%ens-c-tumblr:before
+  content: "\F316"
+%ens-linkedin:before
+  content: "\F318"
+%ens-c-linkedin:before
+  content: "\F319"
+%ens-dribbble:before
+  content: "\F31B"
+%ens-c-dribbble:before
+  content: "\F31C"
+%ens-stumbleupon:before
+  content: "\F31E"
+%ens-c-stumbleupon:before
+  content: "\F31F"
+%ens-lastfm:before
+  content: "\F321"
+%ens-c-lastfm:before
+  content: "\F322"
+%ens-rdio:before
+  content: "\F324"
+%ens-c-rdio:before
+  content: "\F325"
+%ens-spotify:before
+  content: "\F327"
+%ens-c-spotify:before
+  content: "\F328"
+%ens-qq:before
+  content: "\F32A"
+%ens-instagram:before
+  content: "\F32D"
+%ens-dropbox:before
+  content: "\F330"
+%ens-evernote:before
+  content: "\F333"
+%ens-flattr:before
+  content: "\F336"
+%ens-skype:before
+  content: "\F339"
+%ens-c-skype:before
+  content: "\F33A"
+%ens-renren:before
+  content: "\F33C"
+%ens-sina-weibo:before
+  content: "\F33F"
+%ens-paypal:before
+  content: "\F342"
+%ens-picasa:before
+  content: "\F345"
+%ens-soundcloud:before
+  content: "\F348"
+%ens-mixi:before
+  content: "\F34B"
+%ens-behance:before
+  content: "\F34E"
+%ens-google-circles:before
+  content: "\F351"
+%ens-vk:before
+  content: "\F354"
+%ens-smashing:before
+  content: "\F357"

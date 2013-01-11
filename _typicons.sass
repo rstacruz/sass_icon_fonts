@@ -1,0 +1,243 @@
+// Website:
+//   http://typicons.com/
+//
+// Font files:
+//   http://typicons.com/media/fonts/typicons-regular-webfont.eot
+//   http://typicons.com/media/fonts/typicons-regular-webfont.woff
+//   http://typicons.com/media/fonts/typicons-regular-webfont.ttf
+//   http://typicons.com/media/fonts/typicons-regular-webfont.svg
+
+$ti-path: 'typicons' !default
+
+= ti-font
+  @font-face
+    font-family: 'typicons'
+    src: url('#{$ti-path}.eot')
+    src: url('#{$ti-path}.eot?#iefix') format("embedded-opentype"), url('#{$ti-path}.woff') format("woff"), url('#{$ti-path}.ttf') format("truetype"), url('#{$ti-path}.svg#typicons') format("svg")
+    font-weight: normal
+    font-style: normal
+
+// Uses a given icon.
+//
+//     +ti-icon(music)
+//     +ti-icon(music, 24px)        /* 24px size */
+//     +ti-icon(music, 32px, 10px)  /* 24px size, 10px margin right */
+//
+// You may specify a color.
+//
+//     +ti-icon(music, $color: #333)
+//
+// You may also specify a `$top` value to compensate for any mis-alignment.
+// This nudges the icon by that many pixels from the top.
+//
+//     +ti-icon(music, $top: 2px)
+//
+= ti-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
+  @extend %ti-icon
+
+  &:before
+    @if $margin != auto
+      margin-right: $margin
+    @if $size != auto
+      font-size: $size
+    @if $top != auto
+      position: relative
+      top: $top
+    @if $color != auto
+      color: $color
+    @if $shadow != none
+      text-shadow: $shadow
+
+  +ti-glyph($type)
+
+= ti-glyph($type)
+  @extend %ti-#{$type}
+
+%ti-icon
+  &:before
+    line-height: 1em
+    font-family: 'typicons'
+    font-weight: normal
+    font-style: normal
+    display: inline-block
+    text-decoration: none
+    vertical-align: middle
+    text-rendering: optimizeLegibility !important
+    -webkit-font-smoothing: antialiased !important
+
+%ti-location:before
+  content: "A"
+%ti-phone:before
+  content: "B"
+%ti-home:before
+  content: "C"
+%ti-camera:before
+  content: "D"
+%ti-left:before
+  content: "E"
+%ti-right:before
+  content: "F"
+%ti-up:before
+  content: "G"
+%ti-down:before
+  content: "H"
+%ti-refresh:before
+  content: "I"
+%ti-sync:before
+  content: "J"
+%ti-loop:before
+  content: "K"
+%ti-repeat:before
+  content: "L"
+%ti-shuffle:before
+  content: "M"
+%ti-rss:before
+  content: "N"
+%ti-cog:before
+  content: "O"
+%ti-spanner:before
+  content: "P"
+%ti-barChart:before
+  content: "Q"
+%ti-pieChart:before
+  content: "R"
+%ti-lineChart:before
+  content: "S"
+%ti-views:before
+  content: "T"
+%ti-zoomIn:before
+  content: "V"
+%ti-zoomOut:before
+  content: "U"
+%ti-export:before
+  content: "W"
+%ti-user:before
+  content: "X"
+%ti-group:before
+  content: "Y"
+%ti-microphone:before
+  content: "Z"
+%ti-globe:before
+  content: "a"
+%ti-thumbsUp:before
+  content: "b"
+%ti-thumbsDown:before
+  content: "c"
+%ti-tag:before
+  content: "d"
+%ti-tab:before
+  content: "e"
+%ti-warning:before
+  content: "f"
+%ti-tick:before
+  content: "g"
+%ti-beta:before
+  content: "h"
+%ti-unlock:before
+  content: "i"
+%ti-lock:before
+  content: "j"
+%ti-eject:before
+  content: "k"
+%ti-move:before
+  content: "l"
+%ti-expand:before
+  content: "m"
+%ti-cancel:before
+  content: "n"
+%ti-power:before
+  content: "o"
+%ti-compass:before
+  content: "p"
+%ti-radar:before
+  content: "q"
+%ti-directions:before
+  content: "r"
+%ti-pin:before
+  content: "s"
+%ti-mute:before
+  content: "t"
+%ti-volume:before
+  content: "u"
+%ti-world:before
+  content: "v"
+%ti-write:before
+  content: "w"
+%ti-minus:before
+  content: "x"
+%ti-equals:before
+  content: "y"
+%ti-feed:before
+  content: "z"
+%ti-batteryNone:before
+  content: "0"
+%ti-batteryLow:before
+  content: "1"
+%ti-batteryMid:before
+  content: "2"
+%ti-batteryHigh:before
+  content: "3"
+%ti-batteryPower:before
+  content: "4"
+%ti-plus:before
+  content: "5"
+%ti-times:before
+  content: "6"
+%ti-next:before
+  content: "7"
+%ti-previous:before
+  content: "8"
+%ti-edit:before
+  content: "9"
+%ti-cut:before
+  content: "'"
+%ti-anchor:before
+  content: "("
+%ti-bookmark:before
+  content: ")"
+%ti-music:before
+  content: "*"
+%ti-puzzle:before
+  content: "+"
+%ti-archive:before
+  content: ","
+%ti-mobile:before
+  content: "-"
+%ti-contrast:before
+  content: "."
+%ti-brightness:before
+  content: "/"
+%ti-flag:before
+  content: "{"
+%ti-info:before
+  content: "|"
+%ti-unknown:before
+  content: "}"
+%ti-chat:before
+  content: "~"
+%ti-mail:before
+  content: "["
+%ti-message:before
+  content: "\005C"
+%ti-delete:before
+  content: "]"
+%ti-backspace:before
+  content: "^"
+%ti-infinity:before
+  content: "_"
+%ti-key:before
+  content: "$"
+%ti-time:before
+  content: "%"
+%ti-grid:before
+  content: "\0022"
+%ti-list:before
+  content: "\0023"
+%ti-heart:before
+  content: ";"
+%ti-star:before
+  content: "="
+%ti-back:before
+  content: "?"
+%ti-forward:before
+  content: "@"
