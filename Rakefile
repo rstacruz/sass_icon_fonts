@@ -1,48 +1,99 @@
-task 'icons.json' do
+def icon_data
   require 'json'
-
-  files = Dir['./_*.sass']
-  output = {}
-
-  files.each do |file|
-    contents = File.read(file)
-
-    name = (file =~ /_(.*?)\.sass$/) && $1.strip
-
-    pack = output[name] = {
-      'prefix' => (contents =~ /= ([^\-]*)-font/ && $1),
-      'name' => name,
-      'nativeSize' => (contents =~ /Native size: ([\d]+)px/ && $1.to_i),
-      'icons' => []
-    }
-
-    list = pack['icons']
-    contents.gsub(/^%[^\-]*-(.*?):before/) { list << $1 }
-  end
-
-  File.open('icons.json', 'w') { |f| f.write JSON.pretty_generate(output) + "\n" }
+  JSON.parse(File.read('ref/icons.json'))
 end
 
-task 'demo/style.scss' => ['icons.json'] do
-  contents = File.read('demo/style.scss')
-  icons = JSON.parse(File.read('icons.json'))
+def edit(file, &blk)
+  contents = File.read(file)
+  contents = yield(contents)
+  puts "==> Updating #{file}"
+  File.open(file, 'w') { |f| f.write contents }
+end
 
-  includes = []
-  icons.each do |_, pack|
-    pack['icons'].each do |icon|
-      includes << ".%s-%s { @include %s-icon(%s, %ipx); }" % [ pack['prefix'], icon, pack['prefix'], icon, pack['nativeSize'] ]
+def write(file, &blk)
+  contents = yield
+  puts "==> Writing #{file}"
+  File.open(file, 'w') { |f| f.write contents }
+end
+
+# ----------------------------------------------------------------------------
+
+task 'ref/icons.json' do
+  write 'ref/icons.json' do
+    require 'json'
+
+    files = Dir['./_*.sass']
+    output = {}
+
+    files.each do |file|
+      contents = File.read(file)
+
+      name = (file =~ /_(.*?)\.sass$/) && $1.strip
+
+      pack = output[name] = {
+        'prefix' => (contents =~ /= ([^\-]*)-font/ && $1),
+        'name' => name,
+        'nativeSize' => (contents =~ /Native size: ([\d]+)px/ && $1.to_i),
+        'icons' => []
+      }
+
+      list = pack['icons']
+      contents.gsub(/^%[^\-]*-(.*?):before/) { list << $1 }
     end
+
+    JSON.pretty_generate(output) + "\n"
   end
-  contents.gsub!(%r[// START //(.*)// END //]m, "// START //\n#{includes.join("\n")}\n// END //")
-
-  File.open('demo/style.scss', 'w') { |f| f.write contents }
 end
 
-task 'demo/style.css' => ['demo/style.scss'] do
-  system 'sass demo/style.scss > demo/style.css'
+# ----------------------------------------------------------------------------
+
+task 'ref/style.scss' => ['ref/icons.json'] do
+  edit 'ref/style.scss' do |contents|
+    includes = []
+    icon_data.each do |_, pack|
+      pack['icons'].each do |icon|
+        prefix = pack['prefix']
+        size   = pack['nativeSize']
+        includes << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}, #{size}px); }"
+      end
+    end
+    contents.gsub!(%r[// START //(.*)// END //]m, "// START //\n#{includes.join("\n")}\n// END //")
+  end
 end
 
-task :all => %w[icons.json demo/style.css]
+# ----------------------------------------------------------------------------
+
+task 'ref/style.css' => ['ref/style.scss'] do
+  puts "==> Compiling style.css"
+  system 'sass -t compact ref/style.scss > ref/style.css'
+end
+
+# ----------------------------------------------------------------------------
+
+task 'reference.html' => ['ref/style.css'] do
+  edit 'reference.html' do |contents|
+    icons = []
+    icon_data.each do |name, pack|
+      icons << "<div class='pack'>"
+      icons << "<h3>#{name}</h3>"
+      pack['icons'].each do |icon|
+        prefix = pack['prefix']
+        icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-<b>#{icon}</b></span></i>"
+      end
+      icons << "</div>"
+    end
+
+    css_data = "<style type='text/css'>\n%s</style>" % [ File.read('ref/style.css') ]
+    File.unlink 'ref/style.css'
+
+    contents.gsub!(%r[<!-- START -->(.*)<!-- END -->]m, "<!-- START -->\n#{icons.join("\n")}\n<!-- END -->")
+    contents.gsub!(%r[<!-- START CSS -->(.*)<!-- END CSS -->]m) { "<!-- START CSS -->\n#{css_data}\n<!-- END CSS -->" }
+  end
+end
+
+# ----------------------------------------------------------------------------
+
+task :all => %w[ref/icons.json ref/style.css reference.html]
 
 task :default => :all
 
