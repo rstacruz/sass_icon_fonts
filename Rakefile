@@ -34,6 +34,7 @@ task 'support/icons.json' do
         'prefix' => (contents =~ /= ([^\-]*)-font/ && $1),
         'name' => name,
         'nativeSize' => (contents =~ /-native-size: ([\d]+)px/ && $1.to_i),
+        'remotePath' => (contents =~ /^\/\/ +(.*?)\.ttf$/ && $1),
         'icons' => []
       }
 
@@ -48,18 +49,23 @@ end
 # ----------------------------------------------------------------------------
 
 task 'support/style.scss' => ['support/icons.json'] do
-  edit 'support/style.scss' do |contents|
-    includes = []
+  write 'support/style.scss' do |contents|
+    lines = []
+
     icon_data.each do |name, pack|
       size   = pack['nativeSize']
       prefix = pack['prefix']
 
-      includes << "##{name} .icon:before { font-size: #{size}px; }"
+      lines << "$#{prefix}-path: '#{pack['remotePath']}';"
+      lines << "@import '../#{name}';"
+      lines << "@include #{prefix}-font;"
+      lines << "##{name} .icon:before { font-size: #{size}px; }"
       pack['icons'].each do |icon|
-        includes << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}); }"
+        lines << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}); }"
       end
     end
-    contents.gsub!(%r[// START //(.*)// END //]m, "// START //\n#{includes.join("\n")}\n// END //")
+
+    lines.join("\n")
   end
 end
 
@@ -68,6 +74,7 @@ end
 task 'support/style.css' => ['support/style.scss'] do
   puts "==> Compiling style.css"
   system 'sass -t compact support/style.scss > support/style.css'
+  File.unlink 'support/style.scss'
 end
 
 # ----------------------------------------------------------------------------
@@ -96,7 +103,7 @@ end
 
 # ----------------------------------------------------------------------------
 
-task :all => %w[support/icons.json support/style.css index.html]
+task :all => %w[support/icons.json index.html]
 
 task :default => :all
 

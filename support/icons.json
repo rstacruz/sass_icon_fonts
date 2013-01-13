@@ -3,6 +3,7 @@
     "prefix": "el",
     "name": "elusive",
     "nativeSize": 14,
+    "remotePath": "http://aristath.github.com/elusive-iconfont/assets/elusive-font/font/Elusive-Icons",
     "icons": [
       "briefcase",
       "bullhorn",
@@ -281,6 +282,7 @@
     "prefix": "es",
     "name": "entypo-social",
     "nativeSize": 40,
+    "remotePath": "http://www.entypo.com/css/entypo-social",
     "icons": [
       "github",
       "c-github",
@@ -334,6 +336,7 @@
     "prefix": "en",
     "name": "entypo",
     "nativeSize": 40,
+    "remotePath": "http://www.entypo.com/css/entypo",
     "icons": [
       "phone",
       "mobile",
@@ -579,6 +582,7 @@
     "prefix": "fa",
     "name": "font-awesome",
     "nativeSize": 14,
+    "remotePath": "https://github.com/FortAwesome/Font-Awesome/raw/master/font/fontawesome-webfont",
     "icons": [
       "glass",
       "music",
@@ -835,6 +839,7 @@
     "prefix": "ti",
     "name": "typicons",
     "nativeSize": 24,
+    "remotePath": "http://typicons.com/media/fonts/typicons-regular-webfont",
     "icons": [
       "location",
       "phone",
