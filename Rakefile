@@ -5,9 +5,18 @@ task 'icons.json' do
   output = {}
 
   files.each do |file|
+    contents = File.read(file)
+
     name = (file =~ /_(.*?)\.sass$/) && $1.strip
-    list = output[name] = []
-    File.read(file).gsub(/^%[^\-]*-(.*?):before/) { list << $1 }
+
+    pack = output[name] = {
+      'prefix' => (contents =~ /= ([^\-]*)-font/ && $1),
+      'name' => name,
+      'icons' => []
+    }
+
+    list = pack['icons']
+    contents.gsub(/^%[^\-]*-(.*?):before/) { list << $1 }
   end
 
   File.open('icons.json', 'w') { |f| f.write JSON.pretty_generate(output) + "\n" }
