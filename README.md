@@ -109,6 +109,8 @@ button.delete:before {
 Dev notes
 ---------
 
+ * To contribute, just edit the `.sass` files. The `icons.json` and `index.html`
+ are all auto-generated.
  * See `icons.json` for a manifest of available icons.
  * Typing `rake` updates the `index.html` reference.
 
