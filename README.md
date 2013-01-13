@@ -68,5 +68,5 @@ Dev notes
 ---------
 
  * See `icons.json` for a manifest of available icons.
- * You can use `rake icons.json` to re-generate icons.json.
+ * Typing `rake` updates the `index.html` reference.
 
