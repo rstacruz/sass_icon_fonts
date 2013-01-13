@@ -111,3 +111,11 @@ Dev notes
  * See `icons.json` for a manifest of available icons.
  * Typing `rake` updates the `index.html` reference.
 
+Acknowledgements
+----------------
+
+Files in this repo (Sass stylesheets, build script, reference HTML) all (c) 
+  2013, Rico Sta Cruz, released under the MIT License.
+
+Actual font files are not part of this project, and are available in their 
+respective licenses.
