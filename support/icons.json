@@ -2,6 +2,7 @@
   "elusive": {
     "prefix": "el",
     "name": "elusive",
+    "url": "http://aristath.github.com/elusive-iconfont/",
     "nativeSize": 14,
     "remotePath": "http://aristath.github.com/elusive-iconfont/assets/elusive-font/font/Elusive-Icons",
     "icons": [
@@ -281,6 +282,7 @@
   "entypo-social": {
     "prefix": "es",
     "name": "entypo-social",
+    "url": "http://www.entypo.com/",
     "nativeSize": 40,
     "remotePath": "http://www.entypo.com/css/entypo-social",
     "icons": [
@@ -335,6 +337,7 @@
   "entypo": {
     "prefix": "en",
     "name": "entypo",
+    "url": "http://www.entypo.com/",
     "nativeSize": 40,
     "remotePath": "http://www.entypo.com/css/entypo",
     "icons": [
@@ -581,6 +584,7 @@
   "font-awesome": {
     "prefix": "fa",
     "name": "font-awesome",
+    "url": "http://fortawesome.github.com/Font-Awesome/",
     "nativeSize": 14,
     "remotePath": "https://github.com/FortAwesome/Font-Awesome/raw/master/font/fontawesome-webfont",
     "icons": [
@@ -838,6 +842,7 @@
   "typicons": {
     "prefix": "ti",
     "name": "typicons",
+    "url": "http://typicons.com/",
     "nativeSize": 24,
     "remotePath": "http://typicons.com/media/fonts/typicons-regular-webfont",
     "icons": [
