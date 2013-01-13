@@ -78,7 +78,7 @@ task 'reference.html' => ['ref/style.css'] do
       icons << "<h3>#{name}</h3>"
       pack['icons'].each do |icon|
         prefix = pack['prefix']
-        icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-<b>#{icon}</b></span></i>"
+        icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-icon(<b>#{icon}</b>)</span></i>"
       end
       icons << "</div>"
     end
