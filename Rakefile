@@ -33,7 +33,7 @@ task 'support/icons.json' do
       pack = output[name] = {
         'prefix' => (contents =~ /= ([^\-]*)-font/ && $1),
         'name' => name,
-        'nativeSize' => (contents =~ /Native size: ([\d]+)px/ && $1.to_i),
+        'nativeSize' => (contents =~ /-native-size: ([\d]+)px/ && $1.to_i),
         'icons' => []
       }
 
