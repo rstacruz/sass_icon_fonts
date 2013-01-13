@@ -70,8 +70,8 @@ end
 
 # ----------------------------------------------------------------------------
 
-task 'reference.html' => ['ref/style.css'] do
-  edit 'reference.html' do |contents|
+task 'index.html' => ['ref/style.css'] do
+  edit 'index.html' do |contents|
     icons = []
     icon_data.each do |name, pack|
       icons << "<div class='pack'>"
@@ -93,7 +93,7 @@ end
 
 # ----------------------------------------------------------------------------
 
-task :all => %w[ref/icons.json ref/style.css reference.html]
+task :all => %w[ref/icons.json ref/style.css index.html]
 
 task :default => :all
 
