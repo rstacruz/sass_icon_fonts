@@ -1,0 +1,615 @@
+// Sass integration for Elusive Icons
+//   https://github.com/rstacruz/sass_icon_fonts
+//
+// Website:
+//   http://aristath.github.com/elusive-iconfont/
+//
+// Font files:
+//   http://aristath.github.com/elusive-iconfont/assets/elusive-font/font/Elusive-Icons.eot
+//   http://aristath.github.com/elusive-iconfont/assets/elusive-font/font/Elusive-Icons.svg
+//   http://aristath.github.com/elusive-iconfont/assets/elusive-font/font/Elusive-Icons.woff
+//   http://aristath.github.com/elusive-iconfont/assets/elusive-font/font/Elusive-Icons.ttf
+//
+// Native size: 14px
+
+$el-path: 'Elusive-Icons' !default
+
+= el-font
+  @font-face
+    font-family: 'Elusive-Icons'
+    src: url('#{$el-path}.eot')
+    src: url('#{$el-path}.eot?#iefix') format("embedded-opentype"), url('#{$el-path}.svg#Elusive-Icons') format('svg'), url('#{$el-path}.woff') format("woff"), url('#{$el-path}.ttf') format("truetype")
+    font-weight: normal
+    font-style: normal
+
+// Uses a given icon.
+//
+//     +el-icon(music)
+//     +el-icon(music, 24px)        /* 24px size */
+//     +el-icon(music, 32px, 10px)  /* 24px size, 10px margin right */
+//
+// You may specify a color.
+//
+//     +el-icon(music, $color: #333)
+//
+// You may also specify a `$top` value to compensate for any mis-alignment.
+// This nudges the icon by that many pixels from the top.
+//
+//     +el-icon(music, $top: 2px)
+//
+= el-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
+  @extend %el-icon
+
+  &:before
+    @if $margin != auto
+      margin-right: $margin
+    @if $size != auto
+      font-size: $size
+    @if $top != auto
+      position: relative
+      top: $top
+    @if $color != auto
+      color: $color
+    @if $shadow != none
+      text-shadow: $shadow
+
+  +el-glyph($type)
+
+= el-glyph($type)
+  @extend %el-#{$type}
+
+%el-icon
+  &:before
+    line-height: 1em
+    font-family: Elusive-Icons
+    font-weight: normal
+    font-style: normal
+    display: inline-block
+    text-decoration: none
+    vertical-align: middle
+    text-rendering: optimizeLegibility !important
+    -webkit-font-smoothing: antialiased !important
+
+%el-briefcase:before
+  content: "\e10d"
+%el-bullhorn:before
+  content: "\e10c"
+%el-calendar:before
+  content: "\e10b"
+%el-calendar-sign:before
+  content: "\e10a"
+%el-cog:before
+  content: "\e109"
+%el-cog-alt:before
+  content: "\e108"
+%el-cogs:before
+  content: "\e107"
+%el-comment:before
+  content: "\e106"
+%el-error:before
+  content: "\e105"
+%el-error-alt:before
+  content: "\e104"
+%el-exclamation-sign:before
+  content: "\e103"
+%el-eye-close:before
+  content: "\e102"
+%el-flag-alt:before
+  content: "\e101"
+%el-flickr:before
+  content: "\e100"
+%el-folder:before
+  content: "\e0ff"
+%el-folder-close:before
+  content: "\e0fe"
+%el-globe-alt:before
+  content: "\e0fd"
+%el-googleplus:before
+  content: "\e0fc"
+%el-graph:before
+  content: "\e0fb"
+%el-graph-alt:before
+  content: "\e0fa"
+%el-idea-alt:before
+  content: "\e0f9"
+%el-inbox:before
+  content: "\e0f8"
+%el-inbox-alt:before
+  content: "\e0f7"
+%el-inbox-box:before
+  content: "\e0f6"
+%el-book:before
+  content: "\e0f5"
+%el-bookmark:before
+  content: "\e0f4"
+%el-bookmark-empty:before
+  content: "\e0f3"
+%el-braille:before
+  content: "\e0f2"
+%el-circle-arrow-right:before
+  content: "\e0f1"
+%el-circle-arrow-up:before
+  content: "\e0f0"
+%el-cloud:before
+  content: "\e0ef"
+%el-cloud-alt:before
+  content: "\e0ee"
+%el-edit:before
+  content: "\e0ed"
+%el-eject:before
+  content: "\e0ec"
+%el-envelope:before
+  content: "\e0eb"
+%el-envelope-alt:before
+  content: "\e0ea"
+%el-film:before
+  content: "\e0e9"
+%el-filter:before
+  content: "\e0e8"
+%el-fire:before
+  content: "\e0e7"
+%el-flag:before
+  content: "\e0e6"
+%el-github-text:before
+  content: "\e0e5"
+%el-glass:before
+  content: "\e0e4"
+%el-glasses:before
+  content: "\e0e3"
+%el-globe:before
+  content: "\e0e2"
+%el-heart-empty:before
+  content: "\e0e1"
+%el-home:before
+  content: "\e0e0"
+%el-home-alt:before
+  content: "\e0df"
+%el-idea:before
+  content: "\e0de"
+%el-address-book:before
+  content: "\e0dd"
+%el-address-book-alt:before
+  content: "\e0dc"
+%el-adjust:before
+  content: "\e0db"
+%el-adult:before
+  content: "\e0da"
+%el-align-center:before
+  content: "\e0d9"
+%el-align-justify:before
+  content: "\e0d8"
+%el-align-left:before
+  content: "\e0d7"
+%el-align-right:before
+  content: "\e0d6"
+%el-arrow-down:before
+  content: "\e0d5"
+%el-arrow-left:before
+  content: "\e0d4"
+%el-barcode:before
+  content: "\e0d3"
+%el-behance:before
+  content: "\e0d2"
+%el-bell:before
+  content: "\e0d1"
+%el-blind:before
+  content: "\e0d0"
+%el-blogger:before
+  content: "\e0cf"
+%el-bold:before
+  content: "\e0ce"
+%el-chevron-left:before
+  content: "\e0cd"
+%el-chevron-right:before
+  content: "\e0cc"
+%el-chevron-up:before
+  content: "\e0cb"
+%el-child:before
+  content: "\e0ca"
+%el-circle-arrow-down:before
+  content: "\e0c9"
+%el-circle-arrow-left:before
+  content: "\e0c8"
+%el-delicious:before
+  content: "\e0c7"
+%el-deviantart:before
+  content: "\e0c6"
+%el-digg:before
+  content: "\e0c5"
+%el-download:before
+  content: "\e0c4"
+%el-download-alt:before
+  content: "\e0c3"
+%el-dribble:before
+  content: "\e0c2"
+%el-file:before
+  content: "\e0c1"
+%el-file-alt:before
+  content: "\e0c0"
+%el-file-edit:before
+  content: "\e0bf"
+%el-file-edit-alt:before
+  content: "\e0be"
+%el-file-new:before
+  content: "\e0bd"
+%el-file-new-alt:before
+  content: "\e0bc"
+%el-foursquare:before
+  content: "\e0bb"
+%el-friendfeed:before
+  content: "\e0ba"
+%el-friendfeed-rect:before
+  content: "\e0b9"
+%el-fullscreen:before
+  content: "\e0b8"
+%el-gift:before
+  content: "\e0b7"
+%el-github:before
+  content: "\e0b6"
+%el-hand-up:before
+  content: "\e0b5"
+%el-hdd:before
+  content: "\e0b4"
+%el-headphones:before
+  content: "\e0b3"
+%el-hearing-impaired:before
+  content: "\e0b2"
+%el-heart:before
+  content: "\e0b1"
+%el-heart-alt:before
+  content: "\e0b0"
+%el-arrow-right:before
+  content: "\e0af"
+%el-arrow-up:before
+  content: "\e0ae"
+%el-asl:before
+  content: "\e0ad"
+%el-asterisk:before
+  content: "\e0ac"
+%el-backward:before
+  content: "\e0ab"
+%el-ban-circle:before
+  content: "\e0aa"
+%el-camera:before
+  content: "\e0a9"
+%el-cc:before
+  content: "\e0a8"
+%el-certificate:before
+  content: "\e0a7"
+%el-check:before
+  content: "\e0a6"
+%el-check-empty:before
+  content: "\e0a5"
+%el-chevron-down:before
+  content: "\e0a4"
+%el-comment-alt:before
+  content: "\e0a3"
+%el-compass:before
+  content: "\e0a2"
+%el-compass-alt:before
+  content: "\e0a1"
+%el-credit-card:before
+  content: "\e0a0"
+%el-css:before
+  content: "\e09f"
+%el-dashboard:before
+  content: "\e09e"
+%el-eye-open:before
+  content: "\e09d"
+%el-facebook:before
+  content: "\e09c"
+%el-facetime-video:before
+  content: "\e09b"
+%el-fast-backward:before
+  content: "\e09a"
+%el-fast-forward:before
+  content: "\e099"
+%el-female:before
+  content: "\e098"
+%el-folder-open:before
+  content: "\e097"
+%el-folder-sign:before
+  content: "\e096"
+%el-font:before
+  content: "\e095"
+%el-fontsize:before
+  content: "\e094"
+%el-forward:before
+  content: "\e093"
+%el-forward-alt:before
+  content: "\e092"
+%el-group:before
+  content: "\e091"
+%el-group-alt:before
+  content: "\e090"
+%el-guidedog:before
+  content: "\e08f"
+%el-hand-down:before
+  content: "\e08e"
+%el-hand-left:before
+  content: "\e08d"
+%el-hand-right:before
+  content: "\e08c"
+%el-indent-left:before
+  content: "\e08b"
+%el-indent-right:before
+  content: "\e08a"
+%el-info-sign:before
+  content: "\e089"
+%el-instagram:before
+  content: "\e088"
+%el-iphone-home:before
+  content: "\e087"
+%el-italic:before
+  content: "\e086"
+%el-key:before
+  content: "\e085"
+%el-laptop:before
+  content: "\e084"
+%el-laptop-alt:before
+  content: "\e083"
+%el-leaf:before
+  content: "\e082"
+%el-linkedin:before
+  content: "\e081"
+%el-list:before
+  content: "\e080"
+%el-list-alt:before
+  content: "\e07f"
+%el-lock:before
+  content: "\e07e"
+%el-lock-alt:before
+  content: "\e07d"
+%el-magnet:before
+  content: "\e07c"
+%el-male:before
+  content: "\e07b"
+%el-map-marker:before
+  content: "\e07a"
+%el-map-marker-alt:before
+  content: "\e079"
+%el-mic:before
+  content: "\e078"
+%el-mic-alt:before
+  content: "\e077"
+%el-minus:before
+  content: "\e076"
+%el-minus-sign:before
+  content: "\e075"
+%el-move:before
+  content: "\e074"
+%el-music:before
+  content: "\e073"
+%el-network:before
+  content: "\e072"
+%el-off:before
+  content: "\e071"
+%el-ok:before
+  content: "\e070"
+%el-ok-circle:before
+  content: "\e06f"
+%el-ok-sign:before
+  content: "\e06e"
+%el-paper-clip:before
+  content: "\e06d"
+%el-paper-clip-alt:before
+  content: "\e06c"
+%el-path:before
+  content: "\e06b"
+%el-pause:before
+  content: "\e06a"
+%el-pause-alt:before
+  content: "\e069"
+%el-pencil:before
+  content: "\e068"
+%el-pencil-alt:before
+  content: "\e067"
+%el-person:before
+  content: "\e066"
+%el-phone:before
+  content: "\e065"
+%el-phone-alt:before
+  content: "\e064"
+%el-photo:before
+  content: "\e063"
+%el-photo-alt:before
+  content: "\e062"
+%el-picasa:before
+  content: "\e061"
+%el-picture:before
+  content: "\e060"
+%el-pinterest:before
+  content: "\e05f"
+%el-plane:before
+  content: "\e05e"
+%el-play:before
+  content: "\e05d"
+%el-play-alt:before
+  content: "\e05c"
+%el-play-circle:before
+  content: "\e05b"
+%el-plus:before
+  content: "\e05a"
+%el-plus-sign:before
+  content: "\e059"
+%el-print:before
+  content: "\e058"
+%el-qrcode:before
+  content: "\e057"
+%el-question:before
+  content: "\e056"
+%el-question-sign:before
+  content: "\e055"
+%el-quotes:before
+  content: "\e054"
+%el-quotes-alt:before
+  content: "\e053"
+%el-random:before
+  content: "\e052"
+%el-record:before
+  content: "\e051"
+%el-reddit:before
+  content: "\e050"
+%el-refresh:before
+  content: "\e04f"
+%el-remove:before
+  content: "\e04e"
+%el-remove-circle:before
+  content: "\e04d"
+%el-remove-sign:before
+  content: "\e04c"
+%el-repeat:before
+  content: "\e04b"
+%el-repeat-alt:before
+  content: "\e04a"
+%el-resize-full:before
+  content: "\e049"
+%el-resize-horizontal:before
+  content: "\e048"
+%el-resize-small:before
+  content: "\e047"
+%el-resize-vertical:before
+  content: "\e046"
+%el-retweet:before
+  content: "\e045"
+%el-reverse-alt:before
+  content: "\e044"
+%el-road:before
+  content: "\e043"
+%el-rss:before
+  content: "\e042"
+%el-screen:before
+  content: "\e041"
+%el-screen-alt:before
+  content: "\e040"
+%el-screenshot:before
+  content: "\e03f"
+%el-search:before
+  content: "\e03e"
+%el-search-alt:before
+  content: "\e03d"
+%el-share:before
+  content: "\e03c"
+%el-share-alt:before
+  content: "\e03b"
+%el-shopping-cart:before
+  content: "\e03a"
+%el-shopping-cart-sign:before
+  content: "\e039"
+%el-signal:before
+  content: "\e038"
+%el-skype:before
+  content: "\e037"
+%el-slideshare:before
+  content: "\e036"
+%el-smiley:before
+  content: "\e035"
+%el-smiley-alt:before
+  content: "\e034"
+%el-speaker:before
+  content: "\e033"
+%el-stackoverflow:before
+  content: "\e032"
+%el-star:before
+  content: "\e031"
+%el-star-alt:before
+  content: "\e030"
+%el-star-empty:before
+  content: "\e02f"
+%el-step-backward:before
+  content: "\e02e"
+%el-step-forward:before
+  content: "\e02d"
+%el-stop:before
+  content: "\e02c"
+%el-stop-alt:before
+  content: "\e02b"
+%el-stumbleupon:before
+  content: "\e02a"
+%el-tag:before
+  content: "\e029"
+%el-tags:before
+  content: "\e028"
+%el-tasks:before
+  content: "\e027"
+%el-text-height:before
+  content: "\e026"
+%el-text-width:before
+  content: "\e025"
+%el-th:before
+  content: "\e024"
+%el-th-large:before
+  content: "\e023"
+%el-th-list:before
+  content: "\e022"
+%el-thumbs-down:before
+  content: "\e021"
+%el-thumbs-up:before
+  content: "\e020"
+%el-time:before
+  content: "\e01f"
+%el-time-alt:before
+  content: "\e01e"
+%el-tint:before
+  content: "\e01d"
+%el-torso:before
+  content: "\e01c"
+%el-trash:before
+  content: "\e01b"
+%el-trash-alt:before
+  content: "\e01a"
+%el-tumblr:before
+  content: "\e019"
+%el-twitter:before
+  content: "\e018"
+%el-universal-access:before
+  content: "\e017"
+%el-unlock:before
+  content: "\e016"
+%el-unlock-alt:before
+  content: "\e015"
+%el-upload:before
+  content: "\e014"
+%el-user:before
+  content: "\e013"
+%el-video:before
+  content: "\e012"
+%el-video-alt:before
+  content: "\e011"
+%el-video-chat:before
+  content: "\e010"
+%el-view-mode:before
+  content: "\e00f"
+%el-vimeo:before
+  content: "\e00e"
+%el-volume-down:before
+  content: "\e00d"
+%el-volume-off:before
+  content: "\e00c"
+%el-volume-up:before
+  content: "\e00b"
+%el-w3c:before
+  content: "\e00a"
+%el-warning-sign:before
+  content: "\e009"
+%el-website:before
+  content: "\e008"
+%el-website-alt:before
+  content: "\e007"
+%el-wheelchair:before
+  content: "\e006"
+%el-wordpress:before
+  content: "\e005"
+%el-wrench:before
+  content: "\e004"
+%el-wrench-alt:before
+  content: "\e003"
+%el-youtube:before
+  content: "\e002"
+%el-zoom-in:before
+  content: "\e001"
+%el-zoom-out:before
+  content: "\e000"
+%el-vkontakte:before
+  content: "\e10e"
+

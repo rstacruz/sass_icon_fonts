@@ -3,6 +3,7 @@ Sass icon fonts
 
 Sass 3.2 integration for modern icon webfonts.
 
+ * [Elusive] - *271 icons, Aristeides Stathopoulos, SIL license, native at ?px*
  * [Entypo] v2.0 - *241 icons, Daniel Bruce, SIL license, native at 40px*
  * [Entypo Social][Entypo] v2.0 - *46 icons*
  * [Font Awesome] v3.0 - *249 icons, Dave Gandy, CC BY 3.0, native at 14px*
