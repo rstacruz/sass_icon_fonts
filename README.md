@@ -64,3 +64,9 @@ This nudges the icon by that many pixels from the top.
 
 See the individual files for more info.
 
+Dev notes
+---------
+
+ * See `icons.json` for a manifest of available icons.
+ * You can use `rake icons.json` to re-generate icons.json.
+
