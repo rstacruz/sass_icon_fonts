@@ -76,10 +76,10 @@ CSS definitions for unneeded buttons. You see, this modest snippet:
 
 ``` sass
 button.add
-  +fa-icon(plus, 24px)
+  +fa-icon(plus)
 
 button.delete
-  +fa-icon(trash, 24px)
+  +fa-icon(trash)
 ```
 
 ...produces this output CSS below. Note that there isn't anything else here but 
@@ -101,8 +101,7 @@ button.add:before {
   content: "\f067"; }
 
 button.delete:before {
-  content: "\f014";
-  font-size: 24px; }
+  content: "\f014"; }
 ```
 
 Dev notes
