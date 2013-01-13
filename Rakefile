@@ -18,6 +18,7 @@ end
 
 # ----------------------------------------------------------------------------
 
+desc "Scrapes data from sass files and writes them to the json manifest."
 task 'support/icons.json' do
   write 'support/icons.json' do
     require 'json'
@@ -36,11 +37,11 @@ task 'support/icons.json' do
         'url' => (contents =~ /Website: (.*?)$/ && $1.strip),
         'nativeSize' => (contents =~ /-native-size: ([\d]+)px/ && $1.to_i),
         'remotePath' => (contents =~ /^\/\/ +(.*?)\.ttf$/ && $1),
-        'icons' => []
+        'icons' => {}
       }
 
       list = pack['icons']
-      contents.gsub(/^%[^\-]*-(.*?):before/) { list << $1 }
+      contents.gsub(/^%[^\-]*-(.*?):before\n +content: "(.*?)"/) { list[$1] = $2 }
     end
 
     JSON.pretty_generate(output) + "\n"
@@ -61,7 +62,7 @@ task 'support/style.scss' => ['support/icons.json'] do
       lines << "@import '../#{name}';"
       lines << "@include #{prefix}-font;"
       lines << "##{name} .icon:before { font-size: #{size}px; }"
-      pack['icons'].each do |icon|
+      pack['icons'].each do |icon, _|
         lines << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}); }"
       end
     end
@@ -86,7 +87,7 @@ task 'index.html' => ['support/style.css'] do
     icon_data.each do |name, pack|
       icons << "<div class='pack' id='#{name}'>"
       icons << "<h3>#{name}</h3>"
-      pack['icons'].each do |icon|
+      pack['icons'].each do |icon, _|
         prefix = pack['prefix']
         icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-icon(<b>#{icon}</b>)</span></i>"
       end
