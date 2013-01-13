@@ -50,11 +50,13 @@ end
 task 'support/style.scss' => ['support/icons.json'] do
   edit 'support/style.scss' do |contents|
     includes = []
-    icon_data.each do |_, pack|
+    icon_data.each do |name, pack|
+      size   = pack['nativeSize']
+      prefix = pack['prefix']
+
+      includes << "##{name} .icon:before { font-size: #{size}px; }"
       pack['icons'].each do |icon|
-        prefix = pack['prefix']
-        size   = pack['nativeSize']
-        includes << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}, #{size}px); }"
+        includes << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}); }"
       end
     end
     contents.gsub!(%r[// START //(.*)// END //]m, "// START //\n#{includes.join("\n")}\n// END //")
@@ -74,7 +76,7 @@ task 'index.html' => ['support/style.css'] do
   edit 'index.html' do |contents|
     icons = []
     icon_data.each do |name, pack|
-      icons << "<div class='pack'>"
+      icons << "<div class='pack' id='#{name}'>"
       icons << "<h3>#{name}</h3>"
       pack['icons'].each do |icon|
         prefix = pack['prefix']

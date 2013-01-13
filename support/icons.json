@@ -556,7 +556,7 @@
   "typicons": {
     "prefix": "ti",
     "name": "typicons",
-    "nativeSize": 22,
+    "nativeSize": 24,
     "icons": [
       "location",
       "phone",

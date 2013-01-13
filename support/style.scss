@@ -14,625 +14,629 @@ $fa-path: 'https://github.com/FortAwesome/Font-Awesome/raw/master/font/fontaweso
 @include ti-font;
 
 // START //
-.es-github { @include es-icon(github, 40px); }
-.es-c-github { @include es-icon(c-github, 40px); }
-.es-flickr { @include es-icon(flickr, 40px); }
-.es-c-flickr { @include es-icon(c-flickr, 40px); }
-.es-vimeo { @include es-icon(vimeo, 40px); }
-.es-c-vimeo { @include es-icon(c-vimeo, 40px); }
-.es-twitter { @include es-icon(twitter, 40px); }
-.es-c-twitter { @include es-icon(c-twitter, 40px); }
-.es-facebook { @include es-icon(facebook, 40px); }
-.es-c-facebook { @include es-icon(c-facebook, 40px); }
-.es-s-facebook { @include es-icon(s-facebook, 40px); }
-.es-google-plus { @include es-icon(google-plus, 40px); }
-.es-c-google-plus { @include es-icon(c-google-plus, 40px); }
-.es-pinterest { @include es-icon(pinterest, 40px); }
-.es-c-pinterest { @include es-icon(c-pinterest, 40px); }
-.es-tumblr { @include es-icon(tumblr, 40px); }
-.es-c-tumblr { @include es-icon(c-tumblr, 40px); }
-.es-linkedin { @include es-icon(linkedin, 40px); }
-.es-c-linkedin { @include es-icon(c-linkedin, 40px); }
-.es-dribbble { @include es-icon(dribbble, 40px); }
-.es-c-dribbble { @include es-icon(c-dribbble, 40px); }
-.es-stumbleupon { @include es-icon(stumbleupon, 40px); }
-.es-c-stumbleupon { @include es-icon(c-stumbleupon, 40px); }
-.es-lastfm { @include es-icon(lastfm, 40px); }
-.es-c-lastfm { @include es-icon(c-lastfm, 40px); }
-.es-rdio { @include es-icon(rdio, 40px); }
-.es-c-rdio { @include es-icon(c-rdio, 40px); }
-.es-spotify { @include es-icon(spotify, 40px); }
-.es-c-spotify { @include es-icon(c-spotify, 40px); }
-.es-qq { @include es-icon(qq, 40px); }
-.es-instagram { @include es-icon(instagram, 40px); }
-.es-dropbox { @include es-icon(dropbox, 40px); }
-.es-evernote { @include es-icon(evernote, 40px); }
-.es-flattr { @include es-icon(flattr, 40px); }
-.es-skype { @include es-icon(skype, 40px); }
-.es-c-skype { @include es-icon(c-skype, 40px); }
-.es-renren { @include es-icon(renren, 40px); }
-.es-sina-weibo { @include es-icon(sina-weibo, 40px); }
-.es-paypal { @include es-icon(paypal, 40px); }
-.es-picasa { @include es-icon(picasa, 40px); }
-.es-soundcloud { @include es-icon(soundcloud, 40px); }
-.es-mixi { @include es-icon(mixi, 40px); }
-.es-behance { @include es-icon(behance, 40px); }
-.es-google-circles { @include es-icon(google-circles, 40px); }
-.es-vk { @include es-icon(vk, 40px); }
-.es-smashing { @include es-icon(smashing, 40px); }
-.en-phone { @include en-icon(phone, 40px); }
-.en-mobile { @include en-icon(mobile, 40px); }
-.en-mouse { @include en-icon(mouse, 40px); }
-.en-address { @include en-icon(address, 40px); }
-.en-mail { @include en-icon(mail, 40px); }
-.en-paper-plane { @include en-icon(paper-plane, 40px); }
-.en-pencil { @include en-icon(pencil, 40px); }
-.en-feather { @include en-icon(feather, 40px); }
-.en-attach { @include en-icon(attach, 40px); }
-.en-inbox { @include en-icon(inbox, 40px); }
-.en-reply { @include en-icon(reply, 40px); }
-.en-reply-all { @include en-icon(reply-all, 40px); }
-.en-forward { @include en-icon(forward, 40px); }
-.en-user { @include en-icon(user, 40px); }
-.en-users { @include en-icon(users, 40px); }
-.en-add-user { @include en-icon(add-user, 40px); }
-.en-vcard { @include en-icon(vcard, 40px); }
-.en-export { @include en-icon(export, 40px); }
-.en-location { @include en-icon(location, 40px); }
-.en-map { @include en-icon(map, 40px); }
-.en-compass { @include en-icon(compass, 40px); }
-.en-direction { @include en-icon(direction, 40px); }
-.en-hair-cross { @include en-icon(hair-cross, 40px); }
-.en-share { @include en-icon(share, 40px); }
-.en-shareable { @include en-icon(shareable, 40px); }
-.en-heart { @include en-icon(heart, 40px); }
-.en-heart-empty { @include en-icon(heart-empty, 40px); }
-.en-star { @include en-icon(star, 40px); }
-.en-star-empty { @include en-icon(star-empty, 40px); }
-.en-thumbs-up { @include en-icon(thumbs-up, 40px); }
-.en-thumbs-down { @include en-icon(thumbs-down, 40px); }
-.en-chat { @include en-icon(chat, 40px); }
-.en-comment { @include en-icon(comment, 40px); }
-.en-quote { @include en-icon(quote, 40px); }
-.en-home { @include en-icon(home, 40px); }
-.en-popup { @include en-icon(popup, 40px); }
-.en-search { @include en-icon(search, 40px); }
-.en-flashlight { @include en-icon(flashlight, 40px); }
-.en-print { @include en-icon(print, 40px); }
-.en-bell { @include en-icon(bell, 40px); }
-.en-link { @include en-icon(link, 40px); }
-.en-flag { @include en-icon(flag, 40px); }
-.en-cog { @include en-icon(cog, 40px); }
-.en-tools { @include en-icon(tools, 40px); }
-.en-trophy { @include en-icon(trophy, 40px); }
-.en-tag { @include en-icon(tag, 40px); }
-.en-camera { @include en-icon(camera, 40px); }
-.en-megaphone { @include en-icon(megaphone, 40px); }
-.en-moon { @include en-icon(moon, 40px); }
-.en-palette { @include en-icon(palette, 40px); }
-.en-leaf { @include en-icon(leaf, 40px); }
-.en-note { @include en-icon(note, 40px); }
-.en-beamed-note { @include en-icon(beamed-note, 40px); }
-.en-new { @include en-icon(new, 40px); }
-.en-graduation-cap { @include en-icon(graduation-cap, 40px); }
-.en-book { @include en-icon(book, 40px); }
-.en-newspaper { @include en-icon(newspaper, 40px); }
-.en-bag { @include en-icon(bag, 40px); }
-.en-airplane { @include en-icon(airplane, 40px); }
-.en-lifebuoy { @include en-icon(lifebuoy, 40px); }
-.en-eye { @include en-icon(eye, 40px); }
-.en-clock { @include en-icon(clock, 40px); }
-.en-mic { @include en-icon(mic, 40px); }
-.en-calendar { @include en-icon(calendar, 40px); }
-.en-flash { @include en-icon(flash, 40px); }
-.en-thunder-cloud { @include en-icon(thunder-cloud, 40px); }
-.en-droplet { @include en-icon(droplet, 40px); }
-.en-cd { @include en-icon(cd, 40px); }
-.en-briefcase { @include en-icon(briefcase, 40px); }
-.en-air { @include en-icon(air, 40px); }
-.en-hourglass { @include en-icon(hourglass, 40px); }
-.en-gauge { @include en-icon(gauge, 40px); }
-.en-language { @include en-icon(language, 40px); }
-.en-network { @include en-icon(network, 40px); }
-.en-key { @include en-icon(key, 40px); }
-.en-battery { @include en-icon(battery, 40px); }
-.en-bucket { @include en-icon(bucket, 40px); }
-.en-magnet { @include en-icon(magnet, 40px); }
-.en-drive { @include en-icon(drive, 40px); }
-.en-cup { @include en-icon(cup, 40px); }
-.en-rocket { @include en-icon(rocket, 40px); }
-.en-brush { @include en-icon(brush, 40px); }
-.en-suitcase { @include en-icon(suitcase, 40px); }
-.en-traffic-cone { @include en-icon(traffic-cone, 40px); }
-.en-globe { @include en-icon(globe, 40px); }
-.en-keyboard { @include en-icon(keyboard, 40px); }
-.en-browser { @include en-icon(browser, 40px); }
-.en-publish { @include en-icon(publish, 40px); }
-.en-progress-3 { @include en-icon(progress-3, 40px); }
-.en-progress-2 { @include en-icon(progress-2, 40px); }
-.en-progress-1 { @include en-icon(progress-1, 40px); }
-.en-progress-0 { @include en-icon(progress-0, 40px); }
-.en-light-down { @include en-icon(light-down, 40px); }
-.en-light-up { @include en-icon(light-up, 40px); }
-.en-adjust { @include en-icon(adjust, 40px); }
-.en-code { @include en-icon(code, 40px); }
-.en-monitor { @include en-icon(monitor, 40px); }
-.en-infinity { @include en-icon(infinity, 40px); }
-.en-light-bulb { @include en-icon(light-bulb, 40px); }
-.en-credit-card { @include en-icon(credit-card, 40px); }
-.en-database { @include en-icon(database, 40px); }
-.en-voicemail { @include en-icon(voicemail, 40px); }
-.en-clipboard { @include en-icon(clipboard, 40px); }
-.en-cart { @include en-icon(cart, 40px); }
-.en-box { @include en-icon(box, 40px); }
-.en-ticket { @include en-icon(ticket, 40px); }
-.en-rss { @include en-icon(rss, 40px); }
-.en-signal { @include en-icon(signal, 40px); }
-.en-thermometer { @include en-icon(thermometer, 40px); }
-.en-water { @include en-icon(water, 40px); }
-.en-sweden { @include en-icon(sweden, 40px); }
-.en-line-graph { @include en-icon(line-graph, 40px); }
-.en-pie-chart { @include en-icon(pie-chart, 40px); }
-.en-bar-graph { @include en-icon(bar-graph, 40px); }
-.en-area-graph { @include en-icon(area-graph, 40px); }
-.en-lock { @include en-icon(lock, 40px); }
-.en-lock-open { @include en-icon(lock-open, 40px); }
-.en-logout { @include en-icon(logout, 40px); }
-.en-login { @include en-icon(login, 40px); }
-.en-check { @include en-icon(check, 40px); }
-.en-cross { @include en-icon(cross, 40px); }
-.en-squared-minus { @include en-icon(squared-minus, 40px); }
-.en-squared-plus { @include en-icon(squared-plus, 40px); }
-.en-squared-cross { @include en-icon(squared-cross, 40px); }
-.en-circled-minus { @include en-icon(circled-minus, 40px); }
-.en-circled-plus { @include en-icon(circled-plus, 40px); }
-.en-circled-cross { @include en-icon(circled-cross, 40px); }
-.en-minus { @include en-icon(minus, 40px); }
-.en-plus { @include en-icon(plus, 40px); }
-.en-erase { @include en-icon(erase, 40px); }
-.en-block { @include en-icon(block, 40px); }
-.en-info { @include en-icon(info, 40px); }
-.en-circled-info { @include en-icon(circled-info, 40px); }
-.en-help { @include en-icon(help, 40px); }
-.en-circled-help { @include en-icon(circled-help, 40px); }
-.en-warning { @include en-icon(warning, 40px); }
-.en-cycle { @include en-icon(cycle, 40px); }
-.en-cw { @include en-icon(cw, 40px); }
-.en-ccw { @include en-icon(ccw, 40px); }
-.en-shuffle { @include en-icon(shuffle, 40px); }
-.en-back { @include en-icon(back, 40px); }
-.en-level-down { @include en-icon(level-down, 40px); }
-.en-retweet { @include en-icon(retweet, 40px); }
-.en-loop { @include en-icon(loop, 40px); }
-.en-back-in-time { @include en-icon(back-in-time, 40px); }
-.en-level-up { @include en-icon(level-up, 40px); }
-.en-switch { @include en-icon(switch, 40px); }
-.en-numbered-list { @include en-icon(numbered-list, 40px); }
-.en-add-to-list { @include en-icon(add-to-list, 40px); }
-.en-layout { @include en-icon(layout, 40px); }
-.en-list { @include en-icon(list, 40px); }
-.en-text-doc { @include en-icon(text-doc, 40px); }
-.en-text-doc-inverted { @include en-icon(text-doc-inverted, 40px); }
-.en-doc { @include en-icon(doc, 40px); }
-.en-docs { @include en-icon(docs, 40px); }
-.en-landscape-doc { @include en-icon(landscape-doc, 40px); }
-.en-picture { @include en-icon(picture, 40px); }
-.en-video { @include en-icon(video, 40px); }
-.en-music { @include en-icon(music, 40px); }
-.en-folder { @include en-icon(folder, 40px); }
-.en-archive { @include en-icon(archive, 40px); }
-.en-trash { @include en-icon(trash, 40px); }
-.en-upload { @include en-icon(upload, 40px); }
-.en-download { @include en-icon(download, 40px); }
-.en-save { @include en-icon(save, 40px); }
-.en-install { @include en-icon(install, 40px); }
-.en-cloud { @include en-icon(cloud, 40px); }
-.en-upload-cloud { @include en-icon(upload-cloud, 40px); }
-.en-bookmark { @include en-icon(bookmark, 40px); }
-.en-bookmarks { @include en-icon(bookmarks, 40px); }
-.en-open-book { @include en-icon(open-book, 40px); }
-.en-play { @include en-icon(play, 40px); }
-.en-pause { @include en-icon(pause, 40px); }
-.en-record { @include en-icon(record, 40px); }
-.en-stop { @include en-icon(stop, 40px); }
-.en-ff { @include en-icon(ff, 40px); }
-.en-fb { @include en-icon(fb, 40px); }
-.en-to-start { @include en-icon(to-start, 40px); }
-.en-to-end { @include en-icon(to-end, 40px); }
-.en-resize-full { @include en-icon(resize-full, 40px); }
-.en-resize-small { @include en-icon(resize-small, 40px); }
-.en-volume { @include en-icon(volume, 40px); }
-.en-sound { @include en-icon(sound, 40px); }
-.en-mute { @include en-icon(mute, 40px); }
-.en-flow-cascade { @include en-icon(flow-cascade, 40px); }
-.en-flow-branch { @include en-icon(flow-branch, 40px); }
-.en-flow-tree { @include en-icon(flow-tree, 40px); }
-.en-flow-line { @include en-icon(flow-line, 40px); }
-.en-flow-parallel { @include en-icon(flow-parallel, 40px); }
-.en-left-bold { @include en-icon(left-bold, 40px); }
-.en-down-bold { @include en-icon(down-bold, 40px); }
-.en-up-bold { @include en-icon(up-bold, 40px); }
-.en-right-bold { @include en-icon(right-bold, 40px); }
-.en-left { @include en-icon(left, 40px); }
-.en-down { @include en-icon(down, 40px); }
-.en-up { @include en-icon(up, 40px); }
-.en-right { @include en-icon(right, 40px); }
-.en-circled-left { @include en-icon(circled-left, 40px); }
-.en-circled-down { @include en-icon(circled-down, 40px); }
-.en-circled-up { @include en-icon(circled-up, 40px); }
-.en-circled-right { @include en-icon(circled-right, 40px); }
-.en-triangle-left { @include en-icon(triangle-left, 40px); }
-.en-triangle-down { @include en-icon(triangle-down, 40px); }
-.en-triangle-up { @include en-icon(triangle-up, 40px); }
-.en-triangle-right { @include en-icon(triangle-right, 40px); }
-.en-chevron-left { @include en-icon(chevron-left, 40px); }
-.en-chevron-down { @include en-icon(chevron-down, 40px); }
-.en-chevron-up { @include en-icon(chevron-up, 40px); }
-.en-chevron-right { @include en-icon(chevron-right, 40px); }
-.en-chevron-small-left { @include en-icon(chevron-small-left, 40px); }
-.en-chevron-small-down { @include en-icon(chevron-small-down, 40px); }
-.en-chevron-small-up { @include en-icon(chevron-small-up, 40px); }
-.en-chevron-small-right { @include en-icon(chevron-small-right, 40px); }
-.en-chevron-thin-left { @include en-icon(chevron-thin-left, 40px); }
-.en-chevron-thin-down { @include en-icon(chevron-thin-down, 40px); }
-.en-chevron-thin-up { @include en-icon(chevron-thin-up, 40px); }
-.en-chevron-thin-right { @include en-icon(chevron-thin-right, 40px); }
-.en-left-thin { @include en-icon(left-thin, 40px); }
-.en-down-thin { @include en-icon(down-thin, 40px); }
-.en-up-thin { @include en-icon(up-thin, 40px); }
-.en-right-thin { @include en-icon(right-thin, 40px); }
-.en-arrow-combo { @include en-icon(arrow-combo, 40px); }
-.en-three-dots { @include en-icon(three-dots, 40px); }
-.en-two-dots { @include en-icon(two-dots, 40px); }
-.en-dot { @include en-icon(dot, 40px); }
-.en-cc { @include en-icon(cc, 40px); }
-.en-cc-by { @include en-icon(cc-by, 40px); }
-.en-cc-nc { @include en-icon(cc-nc, 40px); }
-.en-cc-nc-eu { @include en-icon(cc-nc-eu, 40px); }
-.en-cc-nc-jp { @include en-icon(cc-nc-jp, 40px); }
-.en-cc-sa { @include en-icon(cc-sa, 40px); }
-.en-cc-nd { @include en-icon(cc-nd, 40px); }
-.en-cc-pd { @include en-icon(cc-pd, 40px); }
-.en-cc-zero { @include en-icon(cc-zero, 40px); }
-.en-cc-share { @include en-icon(cc-share, 40px); }
-.en-cc-remix { @include en-icon(cc-remix, 40px); }
-.en-db-logo { @include en-icon(db-logo, 40px); }
-.en-db-shape { @include en-icon(db-shape, 40px); }
-.fa-glass { @include fa-icon(glass, 14px); }
-.fa-music { @include fa-icon(music, 14px); }
-.fa-search { @include fa-icon(search, 14px); }
-.fa-envelope { @include fa-icon(envelope, 14px); }
-.fa-heart { @include fa-icon(heart, 14px); }
-.fa-star { @include fa-icon(star, 14px); }
-.fa-star-empty { @include fa-icon(star-empty, 14px); }
-.fa-user { @include fa-icon(user, 14px); }
-.fa-film { @include fa-icon(film, 14px); }
-.fa-th-large { @include fa-icon(th-large, 14px); }
-.fa-th { @include fa-icon(th, 14px); }
-.fa-th-list { @include fa-icon(th-list, 14px); }
-.fa-ok { @include fa-icon(ok, 14px); }
-.fa-remove { @include fa-icon(remove, 14px); }
-.fa-zoom-in { @include fa-icon(zoom-in, 14px); }
-.fa-zoom-out { @include fa-icon(zoom-out, 14px); }
-.fa-off { @include fa-icon(off, 14px); }
-.fa-signal { @include fa-icon(signal, 14px); }
-.fa-cog { @include fa-icon(cog, 14px); }
-.fa-trash { @include fa-icon(trash, 14px); }
-.fa-home { @include fa-icon(home, 14px); }
-.fa-file { @include fa-icon(file, 14px); }
-.fa-time { @include fa-icon(time, 14px); }
-.fa-road { @include fa-icon(road, 14px); }
-.fa-download-alt { @include fa-icon(download-alt, 14px); }
-.fa-download { @include fa-icon(download, 14px); }
-.fa-upload { @include fa-icon(upload, 14px); }
-.fa-inbox { @include fa-icon(inbox, 14px); }
-.fa-play-circle { @include fa-icon(play-circle, 14px); }
-.fa-repeat { @include fa-icon(repeat, 14px); }
-.fa-refresh { @include fa-icon(refresh, 14px); }
-.fa-list-alt { @include fa-icon(list-alt, 14px); }
-.fa-lock { @include fa-icon(lock, 14px); }
-.fa-flag { @include fa-icon(flag, 14px); }
-.fa-headphones { @include fa-icon(headphones, 14px); }
-.fa-volume-off { @include fa-icon(volume-off, 14px); }
-.fa-volume-down { @include fa-icon(volume-down, 14px); }
-.fa-volume-up { @include fa-icon(volume-up, 14px); }
-.fa-qrcode { @include fa-icon(qrcode, 14px); }
-.fa-barcode { @include fa-icon(barcode, 14px); }
-.fa-tag { @include fa-icon(tag, 14px); }
-.fa-tags { @include fa-icon(tags, 14px); }
-.fa-book { @include fa-icon(book, 14px); }
-.fa-bookmark { @include fa-icon(bookmark, 14px); }
-.fa-print { @include fa-icon(print, 14px); }
-.fa-camera { @include fa-icon(camera, 14px); }
-.fa-font { @include fa-icon(font, 14px); }
-.fa-bold { @include fa-icon(bold, 14px); }
-.fa-italic { @include fa-icon(italic, 14px); }
-.fa-text-height { @include fa-icon(text-height, 14px); }
-.fa-text-width { @include fa-icon(text-width, 14px); }
-.fa-align-left { @include fa-icon(align-left, 14px); }
-.fa-align-center { @include fa-icon(align-center, 14px); }
-.fa-align-right { @include fa-icon(align-right, 14px); }
-.fa-align-justify { @include fa-icon(align-justify, 14px); }
-.fa-list { @include fa-icon(list, 14px); }
-.fa-indent-left { @include fa-icon(indent-left, 14px); }
-.fa-indent-right { @include fa-icon(indent-right, 14px); }
-.fa-facetime-video { @include fa-icon(facetime-video, 14px); }
-.fa-picture { @include fa-icon(picture, 14px); }
-.fa-pencil { @include fa-icon(pencil, 14px); }
-.fa-map-marker { @include fa-icon(map-marker, 14px); }
-.fa-adjust { @include fa-icon(adjust, 14px); }
-.fa-tint { @include fa-icon(tint, 14px); }
-.fa-edit { @include fa-icon(edit, 14px); }
-.fa-share { @include fa-icon(share, 14px); }
-.fa-check { @include fa-icon(check, 14px); }
-.fa-move { @include fa-icon(move, 14px); }
-.fa-step-backward { @include fa-icon(step-backward, 14px); }
-.fa-fast-backward { @include fa-icon(fast-backward, 14px); }
-.fa-backward { @include fa-icon(backward, 14px); }
-.fa-play { @include fa-icon(play, 14px); }
-.fa-pause { @include fa-icon(pause, 14px); }
-.fa-stop { @include fa-icon(stop, 14px); }
-.fa-forward { @include fa-icon(forward, 14px); }
-.fa-fast-forward { @include fa-icon(fast-forward, 14px); }
-.fa-step-forward { @include fa-icon(step-forward, 14px); }
-.fa-eject { @include fa-icon(eject, 14px); }
-.fa-chevron-left { @include fa-icon(chevron-left, 14px); }
-.fa-chevron-right { @include fa-icon(chevron-right, 14px); }
-.fa-plus-sign { @include fa-icon(plus-sign, 14px); }
-.fa-minus-sign { @include fa-icon(minus-sign, 14px); }
-.fa-remove-sign { @include fa-icon(remove-sign, 14px); }
-.fa-ok-sign { @include fa-icon(ok-sign, 14px); }
-.fa-question-sign { @include fa-icon(question-sign, 14px); }
-.fa-info-sign { @include fa-icon(info-sign, 14px); }
-.fa-screenshot { @include fa-icon(screenshot, 14px); }
-.fa-remove-circle { @include fa-icon(remove-circle, 14px); }
-.fa-ok-circle { @include fa-icon(ok-circle, 14px); }
-.fa-ban-circle { @include fa-icon(ban-circle, 14px); }
-.fa-arrow-left { @include fa-icon(arrow-left, 14px); }
-.fa-arrow-right { @include fa-icon(arrow-right, 14px); }
-.fa-arrow-up { @include fa-icon(arrow-up, 14px); }
-.fa-arrow-down { @include fa-icon(arrow-down, 14px); }
-.fa-share-alt { @include fa-icon(share-alt, 14px); }
-.fa-resize-full { @include fa-icon(resize-full, 14px); }
-.fa-resize-small { @include fa-icon(resize-small, 14px); }
-.fa-plus { @include fa-icon(plus, 14px); }
-.fa-minus { @include fa-icon(minus, 14px); }
-.fa-asterisk { @include fa-icon(asterisk, 14px); }
-.fa-exclamation-sign { @include fa-icon(exclamation-sign, 14px); }
-.fa-gift { @include fa-icon(gift, 14px); }
-.fa-leaf { @include fa-icon(leaf, 14px); }
-.fa-fire { @include fa-icon(fire, 14px); }
-.fa-eye-open { @include fa-icon(eye-open, 14px); }
-.fa-eye-close { @include fa-icon(eye-close, 14px); }
-.fa-warning-sign { @include fa-icon(warning-sign, 14px); }
-.fa-plane { @include fa-icon(plane, 14px); }
-.fa-calendar { @include fa-icon(calendar, 14px); }
-.fa-random { @include fa-icon(random, 14px); }
-.fa-comment { @include fa-icon(comment, 14px); }
-.fa-magnet { @include fa-icon(magnet, 14px); }
-.fa-chevron-up { @include fa-icon(chevron-up, 14px); }
-.fa-chevron-down { @include fa-icon(chevron-down, 14px); }
-.fa-retweet { @include fa-icon(retweet, 14px); }
-.fa-shopping-cart { @include fa-icon(shopping-cart, 14px); }
-.fa-folder-close { @include fa-icon(folder-close, 14px); }
-.fa-folder-open { @include fa-icon(folder-open, 14px); }
-.fa-resize-vertical { @include fa-icon(resize-vertical, 14px); }
-.fa-resize-horizontal { @include fa-icon(resize-horizontal, 14px); }
-.fa-bar-chart { @include fa-icon(bar-chart, 14px); }
-.fa-twitter-sign { @include fa-icon(twitter-sign, 14px); }
-.fa-facebook-sign { @include fa-icon(facebook-sign, 14px); }
-.fa-camera-retro { @include fa-icon(camera-retro, 14px); }
-.fa-key { @include fa-icon(key, 14px); }
-.fa-cogs { @include fa-icon(cogs, 14px); }
-.fa-comments { @include fa-icon(comments, 14px); }
-.fa-thumbs-up { @include fa-icon(thumbs-up, 14px); }
-.fa-thumbs-down { @include fa-icon(thumbs-down, 14px); }
-.fa-star-half { @include fa-icon(star-half, 14px); }
-.fa-heart-empty { @include fa-icon(heart-empty, 14px); }
-.fa-signout { @include fa-icon(signout, 14px); }
-.fa-linkedin-sign { @include fa-icon(linkedin-sign, 14px); }
-.fa-pushpin { @include fa-icon(pushpin, 14px); }
-.fa-external-link { @include fa-icon(external-link, 14px); }
-.fa-signin { @include fa-icon(signin, 14px); }
-.fa-trophy { @include fa-icon(trophy, 14px); }
-.fa-github-sign { @include fa-icon(github-sign, 14px); }
-.fa-upload-alt { @include fa-icon(upload-alt, 14px); }
-.fa-lemon { @include fa-icon(lemon, 14px); }
-.fa-phone { @include fa-icon(phone, 14px); }
-.fa-check-empty { @include fa-icon(check-empty, 14px); }
-.fa-bookmark-empty { @include fa-icon(bookmark-empty, 14px); }
-.fa-phone-sign { @include fa-icon(phone-sign, 14px); }
-.fa-twitter { @include fa-icon(twitter, 14px); }
-.fa-facebook { @include fa-icon(facebook, 14px); }
-.fa-github { @include fa-icon(github, 14px); }
-.fa-unlock { @include fa-icon(unlock, 14px); }
-.fa-credit-card { @include fa-icon(credit-card, 14px); }
-.fa-rss { @include fa-icon(rss, 14px); }
-.fa-hdd { @include fa-icon(hdd, 14px); }
-.fa-bullhorn { @include fa-icon(bullhorn, 14px); }
-.fa-bell { @include fa-icon(bell, 14px); }
-.fa-certificate { @include fa-icon(certificate, 14px); }
-.fa-hand-right { @include fa-icon(hand-right, 14px); }
-.fa-hand-left { @include fa-icon(hand-left, 14px); }
-.fa-hand-up { @include fa-icon(hand-up, 14px); }
-.fa-hand-down { @include fa-icon(hand-down, 14px); }
-.fa-circle-arrow-left { @include fa-icon(circle-arrow-left, 14px); }
-.fa-circle-arrow-right { @include fa-icon(circle-arrow-right, 14px); }
-.fa-circle-arrow-up { @include fa-icon(circle-arrow-up, 14px); }
-.fa-circle-arrow-down { @include fa-icon(circle-arrow-down, 14px); }
-.fa-globe { @include fa-icon(globe, 14px); }
-.fa-wrench { @include fa-icon(wrench, 14px); }
-.fa-tasks { @include fa-icon(tasks, 14px); }
-.fa-filter { @include fa-icon(filter, 14px); }
-.fa-briefcase { @include fa-icon(briefcase, 14px); }
-.fa-fullscreen { @include fa-icon(fullscreen, 14px); }
-.fa-group { @include fa-icon(group, 14px); }
-.fa-link { @include fa-icon(link, 14px); }
-.fa-cloud { @include fa-icon(cloud, 14px); }
-.fa-beaker { @include fa-icon(beaker, 14px); }
-.fa-cut { @include fa-icon(cut, 14px); }
-.fa-copy { @include fa-icon(copy, 14px); }
-.fa-paper-clip { @include fa-icon(paper-clip, 14px); }
-.fa-save { @include fa-icon(save, 14px); }
-.fa-sign-blank { @include fa-icon(sign-blank, 14px); }
-.fa-reorder { @include fa-icon(reorder, 14px); }
-.fa-list-ul { @include fa-icon(list-ul, 14px); }
-.fa-list-ol { @include fa-icon(list-ol, 14px); }
-.fa-strikethrough { @include fa-icon(strikethrough, 14px); }
-.fa-underline { @include fa-icon(underline, 14px); }
-.fa-table { @include fa-icon(table, 14px); }
-.fa-magic { @include fa-icon(magic, 14px); }
-.fa-truck { @include fa-icon(truck, 14px); }
-.fa-pinterest { @include fa-icon(pinterest, 14px); }
-.fa-pinterest-sign { @include fa-icon(pinterest-sign, 14px); }
-.fa-google-plus-sign { @include fa-icon(google-plus-sign, 14px); }
-.fa-google-plus { @include fa-icon(google-plus, 14px); }
-.fa-money { @include fa-icon(money, 14px); }
-.fa-caret-down { @include fa-icon(caret-down, 14px); }
-.fa-caret-up { @include fa-icon(caret-up, 14px); }
-.fa-caret-left { @include fa-icon(caret-left, 14px); }
-.fa-caret-right { @include fa-icon(caret-right, 14px); }
-.fa-columns { @include fa-icon(columns, 14px); }
-.fa-sort { @include fa-icon(sort, 14px); }
-.fa-sort-down { @include fa-icon(sort-down, 14px); }
-.fa-sort-up { @include fa-icon(sort-up, 14px); }
-.fa-envelope-alt { @include fa-icon(envelope-alt, 14px); }
-.fa-linkedin { @include fa-icon(linkedin, 14px); }
-.fa-undo { @include fa-icon(undo, 14px); }
-.fa-legal { @include fa-icon(legal, 14px); }
-.fa-dashboard { @include fa-icon(dashboard, 14px); }
-.fa-comment-alt { @include fa-icon(comment-alt, 14px); }
-.fa-comments-alt { @include fa-icon(comments-alt, 14px); }
-.fa-bolt { @include fa-icon(bolt, 14px); }
-.fa-sitemap { @include fa-icon(sitemap, 14px); }
-.fa-umbrella { @include fa-icon(umbrella, 14px); }
-.fa-paste { @include fa-icon(paste, 14px); }
-.fa-lightbulb { @include fa-icon(lightbulb, 14px); }
-.fa-exchange { @include fa-icon(exchange, 14px); }
-.fa-cloud-download { @include fa-icon(cloud-download, 14px); }
-.fa-cloud-upload { @include fa-icon(cloud-upload, 14px); }
-.fa-user-md { @include fa-icon(user-md, 14px); }
-.fa-stethoscope { @include fa-icon(stethoscope, 14px); }
-.fa-suitcase { @include fa-icon(suitcase, 14px); }
-.fa-bell-alt { @include fa-icon(bell-alt, 14px); }
-.fa-coffee { @include fa-icon(coffee, 14px); }
-.fa-food { @include fa-icon(food, 14px); }
-.fa-file-alt { @include fa-icon(file-alt, 14px); }
-.fa-building { @include fa-icon(building, 14px); }
-.fa-hospital { @include fa-icon(hospital, 14px); }
-.fa-ambulance { @include fa-icon(ambulance, 14px); }
-.fa-medkit { @include fa-icon(medkit, 14px); }
-.fa-fighter-jet { @include fa-icon(fighter-jet, 14px); }
-.fa-beer { @include fa-icon(beer, 14px); }
-.fa-h-sign { @include fa-icon(h-sign, 14px); }
-.fa-plus-sign-alt { @include fa-icon(plus-sign-alt, 14px); }
-.fa-double-angle-left { @include fa-icon(double-angle-left, 14px); }
-.fa-double-angle-right { @include fa-icon(double-angle-right, 14px); }
-.fa-double-angle-up { @include fa-icon(double-angle-up, 14px); }
-.fa-double-angle-down { @include fa-icon(double-angle-down, 14px); }
-.fa-angle-left { @include fa-icon(angle-left, 14px); }
-.fa-angle-right { @include fa-icon(angle-right, 14px); }
-.fa-angle-up { @include fa-icon(angle-up, 14px); }
-.fa-angle-down { @include fa-icon(angle-down, 14px); }
-.fa-desktop { @include fa-icon(desktop, 14px); }
-.fa-laptop { @include fa-icon(laptop, 14px); }
-.fa-tablet { @include fa-icon(tablet, 14px); }
-.fa-mobile-phone { @include fa-icon(mobile-phone, 14px); }
-.fa-circle-blank { @include fa-icon(circle-blank, 14px); }
-.fa-quote-left { @include fa-icon(quote-left, 14px); }
-.fa-quote-right { @include fa-icon(quote-right, 14px); }
-.fa-spinner { @include fa-icon(spinner, 14px); }
-.fa-circle { @include fa-icon(circle, 14px); }
-.fa-reply { @include fa-icon(reply, 14px); }
-.fa-github-alt { @include fa-icon(github-alt, 14px); }
-.fa-folder-close-alt { @include fa-icon(folder-close-alt, 14px); }
-.fa-folder-open-alt { @include fa-icon(folder-open-alt, 14px); }
-.ti-location { @include ti-icon(location, 22px); }
-.ti-phone { @include ti-icon(phone, 22px); }
-.ti-home { @include ti-icon(home, 22px); }
-.ti-camera { @include ti-icon(camera, 22px); }
-.ti-left { @include ti-icon(left, 22px); }
-.ti-right { @include ti-icon(right, 22px); }
-.ti-up { @include ti-icon(up, 22px); }
-.ti-down { @include ti-icon(down, 22px); }
-.ti-refresh { @include ti-icon(refresh, 22px); }
-.ti-sync { @include ti-icon(sync, 22px); }
-.ti-loop { @include ti-icon(loop, 22px); }
-.ti-repeat { @include ti-icon(repeat, 22px); }
-.ti-shuffle { @include ti-icon(shuffle, 22px); }
-.ti-rss { @include ti-icon(rss, 22px); }
-.ti-cog { @include ti-icon(cog, 22px); }
-.ti-spanner { @include ti-icon(spanner, 22px); }
-.ti-bar-chart { @include ti-icon(bar-chart, 22px); }
-.ti-pie-chart { @include ti-icon(pie-chart, 22px); }
-.ti-line-chart { @include ti-icon(line-chart, 22px); }
-.ti-views { @include ti-icon(views, 22px); }
-.ti-zoom-in { @include ti-icon(zoom-in, 22px); }
-.ti-zoom-out { @include ti-icon(zoom-out, 22px); }
-.ti-export { @include ti-icon(export, 22px); }
-.ti-user { @include ti-icon(user, 22px); }
-.ti-group { @include ti-icon(group, 22px); }
-.ti-microphone { @include ti-icon(microphone, 22px); }
-.ti-globe { @include ti-icon(globe, 22px); }
-.ti-thumbs-up { @include ti-icon(thumbs-up, 22px); }
-.ti-thumbs-down { @include ti-icon(thumbs-down, 22px); }
-.ti-tag { @include ti-icon(tag, 22px); }
-.ti-tab { @include ti-icon(tab, 22px); }
-.ti-warning { @include ti-icon(warning, 22px); }
-.ti-tick { @include ti-icon(tick, 22px); }
-.ti-beta { @include ti-icon(beta, 22px); }
-.ti-unlock { @include ti-icon(unlock, 22px); }
-.ti-lock { @include ti-icon(lock, 22px); }
-.ti-eject { @include ti-icon(eject, 22px); }
-.ti-move { @include ti-icon(move, 22px); }
-.ti-expand { @include ti-icon(expand, 22px); }
-.ti-cancel { @include ti-icon(cancel, 22px); }
-.ti-power { @include ti-icon(power, 22px); }
-.ti-compass { @include ti-icon(compass, 22px); }
-.ti-radar { @include ti-icon(radar, 22px); }
-.ti-directions { @include ti-icon(directions, 22px); }
-.ti-pin { @include ti-icon(pin, 22px); }
-.ti-mute { @include ti-icon(mute, 22px); }
-.ti-volume { @include ti-icon(volume, 22px); }
-.ti-world { @include ti-icon(world, 22px); }
-.ti-write { @include ti-icon(write, 22px); }
-.ti-minus { @include ti-icon(minus, 22px); }
-.ti-equals { @include ti-icon(equals, 22px); }
-.ti-feed { @include ti-icon(feed, 22px); }
-.ti-battery-none { @include ti-icon(battery-none, 22px); }
-.ti-battery-low { @include ti-icon(battery-low, 22px); }
-.ti-battery-mid { @include ti-icon(battery-mid, 22px); }
-.ti-battery-high { @include ti-icon(battery-high, 22px); }
-.ti-battery-power { @include ti-icon(battery-power, 22px); }
-.ti-plus { @include ti-icon(plus, 22px); }
-.ti-times { @include ti-icon(times, 22px); }
-.ti-next { @include ti-icon(next, 22px); }
-.ti-previous { @include ti-icon(previous, 22px); }
-.ti-edit { @include ti-icon(edit, 22px); }
-.ti-cut { @include ti-icon(cut, 22px); }
-.ti-anchor { @include ti-icon(anchor, 22px); }
-.ti-bookmark { @include ti-icon(bookmark, 22px); }
-.ti-music { @include ti-icon(music, 22px); }
-.ti-puzzle { @include ti-icon(puzzle, 22px); }
-.ti-archive { @include ti-icon(archive, 22px); }
-.ti-mobile { @include ti-icon(mobile, 22px); }
-.ti-contrast { @include ti-icon(contrast, 22px); }
-.ti-brightness { @include ti-icon(brightness, 22px); }
-.ti-flag { @include ti-icon(flag, 22px); }
-.ti-info { @include ti-icon(info, 22px); }
-.ti-unknown { @include ti-icon(unknown, 22px); }
-.ti-chat { @include ti-icon(chat, 22px); }
-.ti-mail { @include ti-icon(mail, 22px); }
-.ti-message { @include ti-icon(message, 22px); }
-.ti-delete { @include ti-icon(delete, 22px); }
-.ti-backspace { @include ti-icon(backspace, 22px); }
-.ti-infinity { @include ti-icon(infinity, 22px); }
-.ti-key { @include ti-icon(key, 22px); }
-.ti-time { @include ti-icon(time, 22px); }
-.ti-grid { @include ti-icon(grid, 22px); }
-.ti-list { @include ti-icon(list, 22px); }
-.ti-heart { @include ti-icon(heart, 22px); }
-.ti-star { @include ti-icon(star, 22px); }
-.ti-back { @include ti-icon(back, 22px); }
-.ti-forward { @include ti-icon(forward, 22px); }
+#entypo-social .icon:before { font-size: 40px; }
+.es-github { @include es-icon(github); }
+.es-c-github { @include es-icon(c-github); }
+.es-flickr { @include es-icon(flickr); }
+.es-c-flickr { @include es-icon(c-flickr); }
+.es-vimeo { @include es-icon(vimeo); }
+.es-c-vimeo { @include es-icon(c-vimeo); }
+.es-twitter { @include es-icon(twitter); }
+.es-c-twitter { @include es-icon(c-twitter); }
+.es-facebook { @include es-icon(facebook); }
+.es-c-facebook { @include es-icon(c-facebook); }
+.es-s-facebook { @include es-icon(s-facebook); }
+.es-google-plus { @include es-icon(google-plus); }
+.es-c-google-plus { @include es-icon(c-google-plus); }
+.es-pinterest { @include es-icon(pinterest); }
+.es-c-pinterest { @include es-icon(c-pinterest); }
+.es-tumblr { @include es-icon(tumblr); }
+.es-c-tumblr { @include es-icon(c-tumblr); }
+.es-linkedin { @include es-icon(linkedin); }
+.es-c-linkedin { @include es-icon(c-linkedin); }
+.es-dribbble { @include es-icon(dribbble); }
+.es-c-dribbble { @include es-icon(c-dribbble); }
+.es-stumbleupon { @include es-icon(stumbleupon); }
+.es-c-stumbleupon { @include es-icon(c-stumbleupon); }
+.es-lastfm { @include es-icon(lastfm); }
+.es-c-lastfm { @include es-icon(c-lastfm); }
+.es-rdio { @include es-icon(rdio); }
+.es-c-rdio { @include es-icon(c-rdio); }
+.es-spotify { @include es-icon(spotify); }
+.es-c-spotify { @include es-icon(c-spotify); }
+.es-qq { @include es-icon(qq); }
+.es-instagram { @include es-icon(instagram); }
+.es-dropbox { @include es-icon(dropbox); }
+.es-evernote { @include es-icon(evernote); }
+.es-flattr { @include es-icon(flattr); }
+.es-skype { @include es-icon(skype); }
+.es-c-skype { @include es-icon(c-skype); }
+.es-renren { @include es-icon(renren); }
+.es-sina-weibo { @include es-icon(sina-weibo); }
+.es-paypal { @include es-icon(paypal); }
+.es-picasa { @include es-icon(picasa); }
+.es-soundcloud { @include es-icon(soundcloud); }
+.es-mixi { @include es-icon(mixi); }
+.es-behance { @include es-icon(behance); }
+.es-google-circles { @include es-icon(google-circles); }
+.es-vk { @include es-icon(vk); }
+.es-smashing { @include es-icon(smashing); }
+#entypo .icon:before { font-size: 40px; }
+.en-phone { @include en-icon(phone); }
+.en-mobile { @include en-icon(mobile); }
+.en-mouse { @include en-icon(mouse); }
+.en-address { @include en-icon(address); }
+.en-mail { @include en-icon(mail); }
+.en-paper-plane { @include en-icon(paper-plane); }
+.en-pencil { @include en-icon(pencil); }
+.en-feather { @include en-icon(feather); }
+.en-attach { @include en-icon(attach); }
+.en-inbox { @include en-icon(inbox); }
+.en-reply { @include en-icon(reply); }
+.en-reply-all { @include en-icon(reply-all); }
+.en-forward { @include en-icon(forward); }
+.en-user { @include en-icon(user); }
+.en-users { @include en-icon(users); }
+.en-add-user { @include en-icon(add-user); }
+.en-vcard { @include en-icon(vcard); }
+.en-export { @include en-icon(export); }
+.en-location { @include en-icon(location); }
+.en-map { @include en-icon(map); }
+.en-compass { @include en-icon(compass); }
+.en-direction { @include en-icon(direction); }
+.en-hair-cross { @include en-icon(hair-cross); }
+.en-share { @include en-icon(share); }
+.en-shareable { @include en-icon(shareable); }
+.en-heart { @include en-icon(heart); }
+.en-heart-empty { @include en-icon(heart-empty); }
+.en-star { @include en-icon(star); }
+.en-star-empty { @include en-icon(star-empty); }
+.en-thumbs-up { @include en-icon(thumbs-up); }
+.en-thumbs-down { @include en-icon(thumbs-down); }
+.en-chat { @include en-icon(chat); }
+.en-comment { @include en-icon(comment); }
+.en-quote { @include en-icon(quote); }
+.en-home { @include en-icon(home); }
+.en-popup { @include en-icon(popup); }
+.en-search { @include en-icon(search); }
+.en-flashlight { @include en-icon(flashlight); }
+.en-print { @include en-icon(print); }
+.en-bell { @include en-icon(bell); }
+.en-link { @include en-icon(link); }
+.en-flag { @include en-icon(flag); }
+.en-cog { @include en-icon(cog); }
+.en-tools { @include en-icon(tools); }
+.en-trophy { @include en-icon(trophy); }
+.en-tag { @include en-icon(tag); }
+.en-camera { @include en-icon(camera); }
+.en-megaphone { @include en-icon(megaphone); }
+.en-moon { @include en-icon(moon); }
+.en-palette { @include en-icon(palette); }
+.en-leaf { @include en-icon(leaf); }
+.en-note { @include en-icon(note); }
+.en-beamed-note { @include en-icon(beamed-note); }
+.en-new { @include en-icon(new); }
+.en-graduation-cap { @include en-icon(graduation-cap); }
+.en-book { @include en-icon(book); }
+.en-newspaper { @include en-icon(newspaper); }
+.en-bag { @include en-icon(bag); }
+.en-airplane { @include en-icon(airplane); }
+.en-lifebuoy { @include en-icon(lifebuoy); }
+.en-eye { @include en-icon(eye); }
+.en-clock { @include en-icon(clock); }
+.en-mic { @include en-icon(mic); }
+.en-calendar { @include en-icon(calendar); }
+.en-flash { @include en-icon(flash); }
+.en-thunder-cloud { @include en-icon(thunder-cloud); }
+.en-droplet { @include en-icon(droplet); }
+.en-cd { @include en-icon(cd); }
+.en-briefcase { @include en-icon(briefcase); }
+.en-air { @include en-icon(air); }
+.en-hourglass { @include en-icon(hourglass); }
+.en-gauge { @include en-icon(gauge); }
+.en-language { @include en-icon(language); }
+.en-network { @include en-icon(network); }
+.en-key { @include en-icon(key); }
+.en-battery { @include en-icon(battery); }
+.en-bucket { @include en-icon(bucket); }
+.en-magnet { @include en-icon(magnet); }
+.en-drive { @include en-icon(drive); }
+.en-cup { @include en-icon(cup); }
+.en-rocket { @include en-icon(rocket); }
+.en-brush { @include en-icon(brush); }
+.en-suitcase { @include en-icon(suitcase); }
+.en-traffic-cone { @include en-icon(traffic-cone); }
+.en-globe { @include en-icon(globe); }
+.en-keyboard { @include en-icon(keyboard); }
+.en-browser { @include en-icon(browser); }
+.en-publish { @include en-icon(publish); }
+.en-progress-3 { @include en-icon(progress-3); }
+.en-progress-2 { @include en-icon(progress-2); }
+.en-progress-1 { @include en-icon(progress-1); }
+.en-progress-0 { @include en-icon(progress-0); }
+.en-light-down { @include en-icon(light-down); }
+.en-light-up { @include en-icon(light-up); }
+.en-adjust { @include en-icon(adjust); }
+.en-code { @include en-icon(code); }
+.en-monitor { @include en-icon(monitor); }
+.en-infinity { @include en-icon(infinity); }
+.en-light-bulb { @include en-icon(light-bulb); }
+.en-credit-card { @include en-icon(credit-card); }
+.en-database { @include en-icon(database); }
+.en-voicemail { @include en-icon(voicemail); }
+.en-clipboard { @include en-icon(clipboard); }
+.en-cart { @include en-icon(cart); }
+.en-box { @include en-icon(box); }
+.en-ticket { @include en-icon(ticket); }
+.en-rss { @include en-icon(rss); }
+.en-signal { @include en-icon(signal); }
+.en-thermometer { @include en-icon(thermometer); }
+.en-water { @include en-icon(water); }
+.en-sweden { @include en-icon(sweden); }
+.en-line-graph { @include en-icon(line-graph); }
+.en-pie-chart { @include en-icon(pie-chart); }
+.en-bar-graph { @include en-icon(bar-graph); }
+.en-area-graph { @include en-icon(area-graph); }
+.en-lock { @include en-icon(lock); }
+.en-lock-open { @include en-icon(lock-open); }
+.en-logout { @include en-icon(logout); }
+.en-login { @include en-icon(login); }
+.en-check { @include en-icon(check); }
+.en-cross { @include en-icon(cross); }
+.en-squared-minus { @include en-icon(squared-minus); }
+.en-squared-plus { @include en-icon(squared-plus); }
+.en-squared-cross { @include en-icon(squared-cross); }
+.en-circled-minus { @include en-icon(circled-minus); }
+.en-circled-plus { @include en-icon(circled-plus); }
+.en-circled-cross { @include en-icon(circled-cross); }
+.en-minus { @include en-icon(minus); }
+.en-plus { @include en-icon(plus); }
+.en-erase { @include en-icon(erase); }
+.en-block { @include en-icon(block); }
+.en-info { @include en-icon(info); }
+.en-circled-info { @include en-icon(circled-info); }
+.en-help { @include en-icon(help); }
+.en-circled-help { @include en-icon(circled-help); }
+.en-warning { @include en-icon(warning); }
+.en-cycle { @include en-icon(cycle); }
+.en-cw { @include en-icon(cw); }
+.en-ccw { @include en-icon(ccw); }
+.en-shuffle { @include en-icon(shuffle); }
+.en-back { @include en-icon(back); }
+.en-level-down { @include en-icon(level-down); }
+.en-retweet { @include en-icon(retweet); }
+.en-loop { @include en-icon(loop); }
+.en-back-in-time { @include en-icon(back-in-time); }
+.en-level-up { @include en-icon(level-up); }
+.en-switch { @include en-icon(switch); }
+.en-numbered-list { @include en-icon(numbered-list); }
+.en-add-to-list { @include en-icon(add-to-list); }
+.en-layout { @include en-icon(layout); }
+.en-list { @include en-icon(list); }
+.en-text-doc { @include en-icon(text-doc); }
+.en-text-doc-inverted { @include en-icon(text-doc-inverted); }
+.en-doc { @include en-icon(doc); }
+.en-docs { @include en-icon(docs); }
+.en-landscape-doc { @include en-icon(landscape-doc); }
+.en-picture { @include en-icon(picture); }
+.en-video { @include en-icon(video); }
+.en-music { @include en-icon(music); }
+.en-folder { @include en-icon(folder); }
+.en-archive { @include en-icon(archive); }
+.en-trash { @include en-icon(trash); }
+.en-upload { @include en-icon(upload); }
+.en-download { @include en-icon(download); }
+.en-save { @include en-icon(save); }
+.en-install { @include en-icon(install); }
+.en-cloud { @include en-icon(cloud); }
+.en-upload-cloud { @include en-icon(upload-cloud); }
+.en-bookmark { @include en-icon(bookmark); }
+.en-bookmarks { @include en-icon(bookmarks); }
+.en-open-book { @include en-icon(open-book); }
+.en-play { @include en-icon(play); }
+.en-pause { @include en-icon(pause); }
+.en-record { @include en-icon(record); }
+.en-stop { @include en-icon(stop); }
+.en-ff { @include en-icon(ff); }
+.en-fb { @include en-icon(fb); }
+.en-to-start { @include en-icon(to-start); }
+.en-to-end { @include en-icon(to-end); }
+.en-resize-full { @include en-icon(resize-full); }
+.en-resize-small { @include en-icon(resize-small); }
+.en-volume { @include en-icon(volume); }
+.en-sound { @include en-icon(sound); }
+.en-mute { @include en-icon(mute); }
+.en-flow-cascade { @include en-icon(flow-cascade); }
+.en-flow-branch { @include en-icon(flow-branch); }
+.en-flow-tree { @include en-icon(flow-tree); }
+.en-flow-line { @include en-icon(flow-line); }
+.en-flow-parallel { @include en-icon(flow-parallel); }
+.en-left-bold { @include en-icon(left-bold); }
+.en-down-bold { @include en-icon(down-bold); }
+.en-up-bold { @include en-icon(up-bold); }
+.en-right-bold { @include en-icon(right-bold); }
+.en-left { @include en-icon(left); }
+.en-down { @include en-icon(down); }
+.en-up { @include en-icon(up); }
+.en-right { @include en-icon(right); }
+.en-circled-left { @include en-icon(circled-left); }
+.en-circled-down { @include en-icon(circled-down); }
+.en-circled-up { @include en-icon(circled-up); }
+.en-circled-right { @include en-icon(circled-right); }
+.en-triangle-left { @include en-icon(triangle-left); }
+.en-triangle-down { @include en-icon(triangle-down); }
+.en-triangle-up { @include en-icon(triangle-up); }
+.en-triangle-right { @include en-icon(triangle-right); }
+.en-chevron-left { @include en-icon(chevron-left); }
+.en-chevron-down { @include en-icon(chevron-down); }
+.en-chevron-up { @include en-icon(chevron-up); }
+.en-chevron-right { @include en-icon(chevron-right); }
+.en-chevron-small-left { @include en-icon(chevron-small-left); }
+.en-chevron-small-down { @include en-icon(chevron-small-down); }
+.en-chevron-small-up { @include en-icon(chevron-small-up); }
+.en-chevron-small-right { @include en-icon(chevron-small-right); }
+.en-chevron-thin-left { @include en-icon(chevron-thin-left); }
+.en-chevron-thin-down { @include en-icon(chevron-thin-down); }
+.en-chevron-thin-up { @include en-icon(chevron-thin-up); }
+.en-chevron-thin-right { @include en-icon(chevron-thin-right); }
+.en-left-thin { @include en-icon(left-thin); }
+.en-down-thin { @include en-icon(down-thin); }
+.en-up-thin { @include en-icon(up-thin); }
+.en-right-thin { @include en-icon(right-thin); }
+.en-arrow-combo { @include en-icon(arrow-combo); }
+.en-three-dots { @include en-icon(three-dots); }
+.en-two-dots { @include en-icon(two-dots); }
+.en-dot { @include en-icon(dot); }
+.en-cc { @include en-icon(cc); }
+.en-cc-by { @include en-icon(cc-by); }
+.en-cc-nc { @include en-icon(cc-nc); }
+.en-cc-nc-eu { @include en-icon(cc-nc-eu); }
+.en-cc-nc-jp { @include en-icon(cc-nc-jp); }
+.en-cc-sa { @include en-icon(cc-sa); }
+.en-cc-nd { @include en-icon(cc-nd); }
+.en-cc-pd { @include en-icon(cc-pd); }
+.en-cc-zero { @include en-icon(cc-zero); }
+.en-cc-share { @include en-icon(cc-share); }
+.en-cc-remix { @include en-icon(cc-remix); }
+.en-db-logo { @include en-icon(db-logo); }
+.en-db-shape { @include en-icon(db-shape); }
+#font-awesome .icon:before { font-size: 14px; }
+.fa-glass { @include fa-icon(glass); }
+.fa-music { @include fa-icon(music); }
+.fa-search { @include fa-icon(search); }
+.fa-envelope { @include fa-icon(envelope); }
+.fa-heart { @include fa-icon(heart); }
+.fa-star { @include fa-icon(star); }
+.fa-star-empty { @include fa-icon(star-empty); }
+.fa-user { @include fa-icon(user); }
+.fa-film { @include fa-icon(film); }
+.fa-th-large { @include fa-icon(th-large); }
+.fa-th { @include fa-icon(th); }
+.fa-th-list { @include fa-icon(th-list); }
+.fa-ok { @include fa-icon(ok); }
+.fa-remove { @include fa-icon(remove); }
+.fa-zoom-in { @include fa-icon(zoom-in); }
+.fa-zoom-out { @include fa-icon(zoom-out); }
+.fa-off { @include fa-icon(off); }
+.fa-signal { @include fa-icon(signal); }
+.fa-cog { @include fa-icon(cog); }
+.fa-trash { @include fa-icon(trash); }
+.fa-home { @include fa-icon(home); }
+.fa-file { @include fa-icon(file); }
+.fa-time { @include fa-icon(time); }
+.fa-road { @include fa-icon(road); }
+.fa-download-alt { @include fa-icon(download-alt); }
+.fa-download { @include fa-icon(download); }
+.fa-upload { @include fa-icon(upload); }
+.fa-inbox { @include fa-icon(inbox); }
+.fa-play-circle { @include fa-icon(play-circle); }
+.fa-repeat { @include fa-icon(repeat); }
+.fa-refresh { @include fa-icon(refresh); }
+.fa-list-alt { @include fa-icon(list-alt); }
+.fa-lock { @include fa-icon(lock); }
+.fa-flag { @include fa-icon(flag); }
+.fa-headphones { @include fa-icon(headphones); }
+.fa-volume-off { @include fa-icon(volume-off); }
+.fa-volume-down { @include fa-icon(volume-down); }
+.fa-volume-up { @include fa-icon(volume-up); }
+.fa-qrcode { @include fa-icon(qrcode); }
+.fa-barcode { @include fa-icon(barcode); }
+.fa-tag { @include fa-icon(tag); }
+.fa-tags { @include fa-icon(tags); }
+.fa-book { @include fa-icon(book); }
+.fa-bookmark { @include fa-icon(bookmark); }
+.fa-print { @include fa-icon(print); }
+.fa-camera { @include fa-icon(camera); }
+.fa-font { @include fa-icon(font); }
+.fa-bold { @include fa-icon(bold); }
+.fa-italic { @include fa-icon(italic); }
+.fa-text-height { @include fa-icon(text-height); }
+.fa-text-width { @include fa-icon(text-width); }
+.fa-align-left { @include fa-icon(align-left); }
+.fa-align-center { @include fa-icon(align-center); }
+.fa-align-right { @include fa-icon(align-right); }
+.fa-align-justify { @include fa-icon(align-justify); }
+.fa-list { @include fa-icon(list); }
+.fa-indent-left { @include fa-icon(indent-left); }
+.fa-indent-right { @include fa-icon(indent-right); }
+.fa-facetime-video { @include fa-icon(facetime-video); }
+.fa-picture { @include fa-icon(picture); }
+.fa-pencil { @include fa-icon(pencil); }
+.fa-map-marker { @include fa-icon(map-marker); }
+.fa-adjust { @include fa-icon(adjust); }
+.fa-tint { @include fa-icon(tint); }
+.fa-edit { @include fa-icon(edit); }
+.fa-share { @include fa-icon(share); }
+.fa-check { @include fa-icon(check); }
+.fa-move { @include fa-icon(move); }
+.fa-step-backward { @include fa-icon(step-backward); }
+.fa-fast-backward { @include fa-icon(fast-backward); }
+.fa-backward { @include fa-icon(backward); }
+.fa-play { @include fa-icon(play); }
+.fa-pause { @include fa-icon(pause); }
+.fa-stop { @include fa-icon(stop); }
+.fa-forward { @include fa-icon(forward); }
+.fa-fast-forward { @include fa-icon(fast-forward); }
+.fa-step-forward { @include fa-icon(step-forward); }
+.fa-eject { @include fa-icon(eject); }
+.fa-chevron-left { @include fa-icon(chevron-left); }
+.fa-chevron-right { @include fa-icon(chevron-right); }
+.fa-plus-sign { @include fa-icon(plus-sign); }
+.fa-minus-sign { @include fa-icon(minus-sign); }
+.fa-remove-sign { @include fa-icon(remove-sign); }
+.fa-ok-sign { @include fa-icon(ok-sign); }
+.fa-question-sign { @include fa-icon(question-sign); }
+.fa-info-sign { @include fa-icon(info-sign); }
+.fa-screenshot { @include fa-icon(screenshot); }
+.fa-remove-circle { @include fa-icon(remove-circle); }
+.fa-ok-circle { @include fa-icon(ok-circle); }
+.fa-ban-circle { @include fa-icon(ban-circle); }
+.fa-arrow-left { @include fa-icon(arrow-left); }
+.fa-arrow-right { @include fa-icon(arrow-right); }
+.fa-arrow-up { @include fa-icon(arrow-up); }
+.fa-arrow-down { @include fa-icon(arrow-down); }
+.fa-share-alt { @include fa-icon(share-alt); }
+.fa-resize-full { @include fa-icon(resize-full); }
+.fa-resize-small { @include fa-icon(resize-small); }
+.fa-plus { @include fa-icon(plus); }
+.fa-minus { @include fa-icon(minus); }
+.fa-asterisk { @include fa-icon(asterisk); }
+.fa-exclamation-sign { @include fa-icon(exclamation-sign); }
+.fa-gift { @include fa-icon(gift); }
+.fa-leaf { @include fa-icon(leaf); }
+.fa-fire { @include fa-icon(fire); }
+.fa-eye-open { @include fa-icon(eye-open); }
+.fa-eye-close { @include fa-icon(eye-close); }
+.fa-warning-sign { @include fa-icon(warning-sign); }
+.fa-plane { @include fa-icon(plane); }
+.fa-calendar { @include fa-icon(calendar); }
+.fa-random { @include fa-icon(random); }
+.fa-comment { @include fa-icon(comment); }
+.fa-magnet { @include fa-icon(magnet); }
+.fa-chevron-up { @include fa-icon(chevron-up); }
+.fa-chevron-down { @include fa-icon(chevron-down); }
+.fa-retweet { @include fa-icon(retweet); }
+.fa-shopping-cart { @include fa-icon(shopping-cart); }
+.fa-folder-close { @include fa-icon(folder-close); }
+.fa-folder-open { @include fa-icon(folder-open); }
+.fa-resize-vertical { @include fa-icon(resize-vertical); }
+.fa-resize-horizontal { @include fa-icon(resize-horizontal); }
+.fa-bar-chart { @include fa-icon(bar-chart); }
+.fa-twitter-sign { @include fa-icon(twitter-sign); }
+.fa-facebook-sign { @include fa-icon(facebook-sign); }
+.fa-camera-retro { @include fa-icon(camera-retro); }
+.fa-key { @include fa-icon(key); }
+.fa-cogs { @include fa-icon(cogs); }
+.fa-comments { @include fa-icon(comments); }
+.fa-thumbs-up { @include fa-icon(thumbs-up); }
+.fa-thumbs-down { @include fa-icon(thumbs-down); }
+.fa-star-half { @include fa-icon(star-half); }
+.fa-heart-empty { @include fa-icon(heart-empty); }
+.fa-signout { @include fa-icon(signout); }
+.fa-linkedin-sign { @include fa-icon(linkedin-sign); }
+.fa-pushpin { @include fa-icon(pushpin); }
+.fa-external-link { @include fa-icon(external-link); }
+.fa-signin { @include fa-icon(signin); }
+.fa-trophy { @include fa-icon(trophy); }
+.fa-github-sign { @include fa-icon(github-sign); }
+.fa-upload-alt { @include fa-icon(upload-alt); }
+.fa-lemon { @include fa-icon(lemon); }
+.fa-phone { @include fa-icon(phone); }
+.fa-check-empty { @include fa-icon(check-empty); }
+.fa-bookmark-empty { @include fa-icon(bookmark-empty); }
+.fa-phone-sign { @include fa-icon(phone-sign); }
+.fa-twitter { @include fa-icon(twitter); }
+.fa-facebook { @include fa-icon(facebook); }
+.fa-github { @include fa-icon(github); }
+.fa-unlock { @include fa-icon(unlock); }
+.fa-credit-card { @include fa-icon(credit-card); }
+.fa-rss { @include fa-icon(rss); }
+.fa-hdd { @include fa-icon(hdd); }
+.fa-bullhorn { @include fa-icon(bullhorn); }
+.fa-bell { @include fa-icon(bell); }
+.fa-certificate { @include fa-icon(certificate); }
+.fa-hand-right { @include fa-icon(hand-right); }
+.fa-hand-left { @include fa-icon(hand-left); }
+.fa-hand-up { @include fa-icon(hand-up); }
+.fa-hand-down { @include fa-icon(hand-down); }
+.fa-circle-arrow-left { @include fa-icon(circle-arrow-left); }
+.fa-circle-arrow-right { @include fa-icon(circle-arrow-right); }
+.fa-circle-arrow-up { @include fa-icon(circle-arrow-up); }
+.fa-circle-arrow-down { @include fa-icon(circle-arrow-down); }
+.fa-globe { @include fa-icon(globe); }
+.fa-wrench { @include fa-icon(wrench); }
+.fa-tasks { @include fa-icon(tasks); }
+.fa-filter { @include fa-icon(filter); }
+.fa-briefcase { @include fa-icon(briefcase); }
+.fa-fullscreen { @include fa-icon(fullscreen); }
+.fa-group { @include fa-icon(group); }
+.fa-link { @include fa-icon(link); }
+.fa-cloud { @include fa-icon(cloud); }
+.fa-beaker { @include fa-icon(beaker); }
+.fa-cut { @include fa-icon(cut); }
+.fa-copy { @include fa-icon(copy); }
+.fa-paper-clip { @include fa-icon(paper-clip); }
+.fa-save { @include fa-icon(save); }
+.fa-sign-blank { @include fa-icon(sign-blank); }
+.fa-reorder { @include fa-icon(reorder); }
+.fa-list-ul { @include fa-icon(list-ul); }
+.fa-list-ol { @include fa-icon(list-ol); }
+.fa-strikethrough { @include fa-icon(strikethrough); }
+.fa-underline { @include fa-icon(underline); }
+.fa-table { @include fa-icon(table); }
+.fa-magic { @include fa-icon(magic); }
+.fa-truck { @include fa-icon(truck); }
+.fa-pinterest { @include fa-icon(pinterest); }
+.fa-pinterest-sign { @include fa-icon(pinterest-sign); }
+.fa-google-plus-sign { @include fa-icon(google-plus-sign); }
+.fa-google-plus { @include fa-icon(google-plus); }
+.fa-money { @include fa-icon(money); }
+.fa-caret-down { @include fa-icon(caret-down); }
+.fa-caret-up { @include fa-icon(caret-up); }
+.fa-caret-left { @include fa-icon(caret-left); }
+.fa-caret-right { @include fa-icon(caret-right); }
+.fa-columns { @include fa-icon(columns); }
+.fa-sort { @include fa-icon(sort); }
+.fa-sort-down { @include fa-icon(sort-down); }
+.fa-sort-up { @include fa-icon(sort-up); }
+.fa-envelope-alt { @include fa-icon(envelope-alt); }
+.fa-linkedin { @include fa-icon(linkedin); }
+.fa-undo { @include fa-icon(undo); }
+.fa-legal { @include fa-icon(legal); }
+.fa-dashboard { @include fa-icon(dashboard); }
+.fa-comment-alt { @include fa-icon(comment-alt); }
+.fa-comments-alt { @include fa-icon(comments-alt); }
+.fa-bolt { @include fa-icon(bolt); }
+.fa-sitemap { @include fa-icon(sitemap); }
+.fa-umbrella { @include fa-icon(umbrella); }
+.fa-paste { @include fa-icon(paste); }
+.fa-lightbulb { @include fa-icon(lightbulb); }
+.fa-exchange { @include fa-icon(exchange); }
+.fa-cloud-download { @include fa-icon(cloud-download); }
+.fa-cloud-upload { @include fa-icon(cloud-upload); }
+.fa-user-md { @include fa-icon(user-md); }
+.fa-stethoscope { @include fa-icon(stethoscope); }
+.fa-suitcase { @include fa-icon(suitcase); }
+.fa-bell-alt { @include fa-icon(bell-alt); }
+.fa-coffee { @include fa-icon(coffee); }
+.fa-food { @include fa-icon(food); }
+.fa-file-alt { @include fa-icon(file-alt); }
+.fa-building { @include fa-icon(building); }
+.fa-hospital { @include fa-icon(hospital); }
+.fa-ambulance { @include fa-icon(ambulance); }
+.fa-medkit { @include fa-icon(medkit); }
+.fa-fighter-jet { @include fa-icon(fighter-jet); }
+.fa-beer { @include fa-icon(beer); }
+.fa-h-sign { @include fa-icon(h-sign); }
+.fa-plus-sign-alt { @include fa-icon(plus-sign-alt); }
+.fa-double-angle-left { @include fa-icon(double-angle-left); }
+.fa-double-angle-right { @include fa-icon(double-angle-right); }
+.fa-double-angle-up { @include fa-icon(double-angle-up); }
+.fa-double-angle-down { @include fa-icon(double-angle-down); }
+.fa-angle-left { @include fa-icon(angle-left); }
+.fa-angle-right { @include fa-icon(angle-right); }
+.fa-angle-up { @include fa-icon(angle-up); }
+.fa-angle-down { @include fa-icon(angle-down); }
+.fa-desktop { @include fa-icon(desktop); }
+.fa-laptop { @include fa-icon(laptop); }
+.fa-tablet { @include fa-icon(tablet); }
+.fa-mobile-phone { @include fa-icon(mobile-phone); }
+.fa-circle-blank { @include fa-icon(circle-blank); }
+.fa-quote-left { @include fa-icon(quote-left); }
+.fa-quote-right { @include fa-icon(quote-right); }
+.fa-spinner { @include fa-icon(spinner); }
+.fa-circle { @include fa-icon(circle); }
+.fa-reply { @include fa-icon(reply); }
+.fa-github-alt { @include fa-icon(github-alt); }
+.fa-folder-close-alt { @include fa-icon(folder-close-alt); }
+.fa-folder-open-alt { @include fa-icon(folder-open-alt); }
+#typicons .icon:before { font-size: 24px; }
+.ti-location { @include ti-icon(location); }
+.ti-phone { @include ti-icon(phone); }
+.ti-home { @include ti-icon(home); }
+.ti-camera { @include ti-icon(camera); }
+.ti-left { @include ti-icon(left); }
+.ti-right { @include ti-icon(right); }
+.ti-up { @include ti-icon(up); }
+.ti-down { @include ti-icon(down); }
+.ti-refresh { @include ti-icon(refresh); }
+.ti-sync { @include ti-icon(sync); }
+.ti-loop { @include ti-icon(loop); }
+.ti-repeat { @include ti-icon(repeat); }
+.ti-shuffle { @include ti-icon(shuffle); }
+.ti-rss { @include ti-icon(rss); }
+.ti-cog { @include ti-icon(cog); }
+.ti-spanner { @include ti-icon(spanner); }
+.ti-bar-chart { @include ti-icon(bar-chart); }
+.ti-pie-chart { @include ti-icon(pie-chart); }
+.ti-line-chart { @include ti-icon(line-chart); }
+.ti-views { @include ti-icon(views); }
+.ti-zoom-in { @include ti-icon(zoom-in); }
+.ti-zoom-out { @include ti-icon(zoom-out); }
+.ti-export { @include ti-icon(export); }
+.ti-user { @include ti-icon(user); }
+.ti-group { @include ti-icon(group); }
+.ti-microphone { @include ti-icon(microphone); }
+.ti-globe { @include ti-icon(globe); }
+.ti-thumbs-up { @include ti-icon(thumbs-up); }
+.ti-thumbs-down { @include ti-icon(thumbs-down); }
+.ti-tag { @include ti-icon(tag); }
+.ti-tab { @include ti-icon(tab); }
+.ti-warning { @include ti-icon(warning); }
+.ti-tick { @include ti-icon(tick); }
+.ti-beta { @include ti-icon(beta); }
+.ti-unlock { @include ti-icon(unlock); }
+.ti-lock { @include ti-icon(lock); }
+.ti-eject { @include ti-icon(eject); }
+.ti-move { @include ti-icon(move); }
+.ti-expand { @include ti-icon(expand); }
+.ti-cancel { @include ti-icon(cancel); }
+.ti-power { @include ti-icon(power); }
+.ti-compass { @include ti-icon(compass); }
+.ti-radar { @include ti-icon(radar); }
+.ti-directions { @include ti-icon(directions); }
+.ti-pin { @include ti-icon(pin); }
+.ti-mute { @include ti-icon(mute); }
+.ti-volume { @include ti-icon(volume); }
+.ti-world { @include ti-icon(world); }
+.ti-write { @include ti-icon(write); }
+.ti-minus { @include ti-icon(minus); }
+.ti-equals { @include ti-icon(equals); }
+.ti-feed { @include ti-icon(feed); }
+.ti-battery-none { @include ti-icon(battery-none); }
+.ti-battery-low { @include ti-icon(battery-low); }
+.ti-battery-mid { @include ti-icon(battery-mid); }
+.ti-battery-high { @include ti-icon(battery-high); }
+.ti-battery-power { @include ti-icon(battery-power); }
+.ti-plus { @include ti-icon(plus); }
+.ti-times { @include ti-icon(times); }
+.ti-next { @include ti-icon(next); }
+.ti-previous { @include ti-icon(previous); }
+.ti-edit { @include ti-icon(edit); }
+.ti-cut { @include ti-icon(cut); }
+.ti-anchor { @include ti-icon(anchor); }
+.ti-bookmark { @include ti-icon(bookmark); }
+.ti-music { @include ti-icon(music); }
+.ti-puzzle { @include ti-icon(puzzle); }
+.ti-archive { @include ti-icon(archive); }
+.ti-mobile { @include ti-icon(mobile); }
+.ti-contrast { @include ti-icon(contrast); }
+.ti-brightness { @include ti-icon(brightness); }
+.ti-flag { @include ti-icon(flag); }
+.ti-info { @include ti-icon(info); }
+.ti-unknown { @include ti-icon(unknown); }
+.ti-chat { @include ti-icon(chat); }
+.ti-mail { @include ti-icon(mail); }
+.ti-message { @include ti-icon(message); }
+.ti-delete { @include ti-icon(delete); }
+.ti-backspace { @include ti-icon(backspace); }
+.ti-infinity { @include ti-icon(infinity); }
+.ti-key { @include ti-icon(key); }
+.ti-time { @include ti-icon(time); }
+.ti-grid { @include ti-icon(grid); }
+.ti-list { @include ti-icon(list); }
+.ti-heart { @include ti-icon(heart); }
+.ti-star { @include ti-icon(star); }
+.ti-back { @include ti-icon(back); }
+.ti-forward { @include ti-icon(forward); }
 // END //
