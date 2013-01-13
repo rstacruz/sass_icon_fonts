@@ -85,8 +85,10 @@ task 'index.html' => ['support/style.css'] do
   edit 'index.html' do |contents|
     icons = []
     icon_data.each do |name, pack|
+      url = "https://github.com/rstacruz/sass_icon_fonts/blob/master/_#{name}.sass"
+
       icons << "<div class='pack' id='#{name}'>"
-      icons << "<h3>#{name}</h3>"
+      icons << "<h3><a class='title' href='#{url}'>#{name}</a></h3>"
       pack['icons'].each do |icon, _|
         prefix = pack['prefix']
         icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-icon(<b>#{icon}</b>)</span></i>"
