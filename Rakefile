@@ -31,7 +31,7 @@ task 'support/icons.json' do
       name = (file =~ /_(.*?)\.sass$/) && $1.strip
 
       pack = output[name] = {
-        'psupportix' => (contents =~ /= ([^\-]*)-font/ && $1),
+        'prefix' => (contents =~ /= ([^\-]*)-font/ && $1),
         'name' => name,
         'nativeSize' => (contents =~ /Native size: ([\d]+)px/ && $1.to_i),
         'icons' => []
@@ -52,9 +52,9 @@ task 'support/style.scss' => ['support/icons.json'] do
     includes = []
     icon_data.each do |_, pack|
       pack['icons'].each do |icon|
-        psupportix = pack['psupportix']
+        prefix = pack['prefix']
         size   = pack['nativeSize']
-        includes << ".#{psupportix}-#{icon} { @include #{psupportix}-icon(#{icon}, #{size}px); }"
+        includes << ".#{prefix}-#{icon} { @include #{prefix}-icon(#{icon}, #{size}px); }"
       end
     end
     contents.gsub!(%r[// START //(.*)// END //]m, "// START //\n#{includes.join("\n")}\n// END //")
@@ -77,13 +77,14 @@ task 'index.html' => ['support/style.css'] do
       icons << "<div class='pack'>"
       icons << "<h3>#{name}</h3>"
       pack['icons'].each do |icon|
-        psupportix = pack['psupportix']
-        icons << "<i class='icon #{psupportix}-#{icon}'><span>#{psupportix}-icon(<b>#{icon}</b>)</span></i>"
+        prefix = pack['prefix']
+        icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-icon(<b>#{icon}</b>)</span></i>"
       end
       icons << "</div>"
     end
 
     css_data = "<style type='text/css'>\n%s</style>" % [ File.read('support/style.css') ]
+    css_data.gsub! /\n{2,}/, "\n"
     File.unlink 'support/style.css'
 
     contents.gsub!(%r[<!-- START -->(.*)<!-- END -->]m, "<!-- START -->\n#{icons.join("\n")}\n<!-- END -->")
