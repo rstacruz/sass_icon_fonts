@@ -10,5 +10,15 @@ task 'icons.json' do
     File.read(file).gsub(/^%[^\-]*-(.*?):before/) { list << $1 }
   end
 
-  puts JSON.pretty_generate(output)
+  File.open('icons.json', 'w') { |f| f.write JSON.pretty_generate(output) + "\n" }
 end
+
+task 'demo/style.css' do
+  system 'sass demo/style.sass > demo/style.css'
+end
+
+task :all => %w[icons.json demo/style.css]
+
+task :default => :all
+
+
