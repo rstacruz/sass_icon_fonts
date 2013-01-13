@@ -9,6 +9,7 @@ Sass 3.2 integration for modern icon webfonts.
  * [Font Awesome] v3.0 - *249 icons, Dave Gandy, CC BY 3.0, native at 14px*
  * [Typicons] - *88 icons, Stephen Hutchings, CC BY-SA 3.0, native at 24px*
 
+[Elusive]: https://github.com/aristath/elusive-iconfont
 [Font Awesome]: http://fortawesome.github.com/Font-Awesome/
 [Entypo]: http://www.entypo.com/
 [Typicons]: http://typicons.com/
