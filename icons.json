@@ -2,6 +2,7 @@
   "entypo-social": {
     "prefix": "es",
     "name": "entypo-social",
+    "nativeSize": 40,
     "icons": [
       "github",
       "c-github",
@@ -54,6 +55,7 @@
   "entypo": {
     "prefix": "en",
     "name": "entypo",
+    "nativeSize": 40,
     "icons": [
       "phone",
       "mobile",
@@ -298,6 +300,7 @@
   "font-awesome": {
     "prefix": "fa",
     "name": "font-awesome",
+    "nativeSize": 14,
     "icons": [
       "glass",
       "music",
@@ -553,6 +556,7 @@
   "typicons": {
     "prefix": "ti",
     "name": "typicons",
+    "nativeSize": 22,
     "icons": [
       "location",
       "phone",
