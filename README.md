@@ -64,6 +64,47 @@ This nudges the icon by that many pixels from the top.
 
 See the individual files for more info.
 
+Why?
+----
+
+ * So that you define icons in your CSS, not in your HTML.
+ * So that your CSS becomes leaner by not adding definitions for icons you don't 
+ use.
+
+Sass_icon_fonts uses Sass placeholder classes to make sure that you don't get 
+CSS definitions for unneeded buttons. You see, this modest snippet:
+
+``` sass
+button.add
+  +fa-icon(plus, 24px)
+
+button.delete
+  +fa-icon(trash, 24px)
+```
+
+...produces this output CSS below. Note that there isn't anything else here but 
+the two buttons. Compare this with font-awesome's default Sass file :)
+
+``` css
+button.add:before, button.delete:before {
+  line-height: 1em;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important; }
+
+button.add:before {
+  content: "\f067"; }
+
+button.delete:before {
+  content: "\f014";
+  font-size: 24px; }
+```
+
 Dev notes
 ---------
 
