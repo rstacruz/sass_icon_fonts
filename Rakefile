@@ -91,7 +91,7 @@ task 'index.html' => ['support/style.css'] do
       icons << "<h3><a class='title' href='#{url}'>#{name}</a></h3>"
       pack['icons'].each do |icon, _|
         prefix = pack['prefix']
-        icons << "<i class='icon #{prefix}-#{icon}'><span>#{prefix}-icon(<b>#{icon}</b>)</span></i>"
+        icons << "<i class='icon #{prefix}-#{icon}'><span>#{icon}</span></i>"
       end
       icons << "</div>"
     end
