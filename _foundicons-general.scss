@@ -1,0 +1,132 @@
+// Sass/SCSS integration for Foundation Icons: General subset
+//   https://github.com/stechico/sass_icon_fonts
+//   Forked via: https://github.com/rstacruz/sass_icon_fonts
+//
+// Website: https://github.com/zurb/foundation-icons
+//
+// Font files:
+//   https://github.com/zurb/foundation-icons/raw/master/foundation_icons_general/fonts/general_foundicons.eot
+//   https://github.com/zurb/foundation-icons/raw/master/foundation_icons_general/fonts/general_foundicons.ttf
+//   https://github.com/zurb/foundation-icons/raw/master/foundation_icons_general/fonts/general_foundicons.svg
+//   https://github.com/zurb/foundation-icons/raw/master/foundation_icons_general/fonts/general_foundicons.woff
+
+$fd-native-size: 14px;
+
+$fd-path: "general_foundicons" !default;
+$fd-fontName: "GeneralFoundicons";
+
+@mixin fd-font {
+  @font-face {
+    font-family: $fd-fontName;
+    src: url("#{$fd-path}.eot");
+    src: url("#{$fd-path}.eot?#iefix") format("embedded-opentype"), url("#{$fd-path}.woff") format("woff"), url("#{$fd-path}.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+// Uses a given icon.
+// This uses @include directive; utilizing @extend-Only Selectors.
+// You don't have to worry about the latter, just the @include.
+//
+//     @include fd-icon(music)
+//     @include fd-icon(music, 24px)        /* 24px size
+//     @include fd-icon(music, 32px, 10px)  /* 24px size, 10px margin right
+//
+// You may specify a color.
+//
+//     @include fd-icon(music, $color: #333)
+//
+// You may also specify a `$top` value to compensate for any mis-alignment.
+// This nudges the icon by that many pixels from the top.
+//
+//     @include fd-icon(music, $top: 2px)
+//
+@mixin fd-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none) {
+  @extend %fd-icon;
+  &:before {
+    @if $margin != auto {
+      margin-right: $margin;
+    }
+    @if $size != auto {
+      font-size: $size;
+    }
+    @if $top != auto {
+      position: relative;
+      top: $top;
+    }
+    @if $color != auto {
+      color: $color;
+    }
+    @if $shadow != none {
+      text-shadow: $shadow;
+    }
+  }
+  @include fd-glyph($type);
+}
+
+@mixin fd-glyph($type) {
+  @extend %fd-#{$type};
+}
+
+%fd-icon {
+  &:before {
+    line-height: 1em;
+    font-family: $fd-fontName;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: none;
+    vertical-align: middle;
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+  }
+}
+
+%fd-settings:before { content: "\f000"; }
+%fd-heart:before { content: "\f001"; }
+%fd-star:before { content: "\f002"; }
+%fd-plus:before { content: "\f003"; }
+%fd-minus:before { content: "\f004"; }
+%fd-checkmark:before { content: "\f005"; }
+%fd-remove:before { content: "\f006"; }
+%fd-mail:before { content: "\f007"; }
+%fd-calendar:before { content: "\f008"; }
+%fd-page:before { content: "\f009"; }
+%fd-tools:before { content: "\f00a"; }
+%fd-globe:before { content: "\f00b"; }
+%fd-home:before { content: "\f00c"; }
+%fd-quote:before { content: "\f00d"; }
+%fd-people:before { content: "\f00e"; }
+%fd-monitor:before { content: "\f00f"; }
+%fd-laptop:before { content: "\f010"; }
+%fd-phone:before { content: "\f011"; }
+%fd-cloud:before { content: "\f012"; }
+%fd-error:before { content: "\f013"; }
+%fd-right-arrow:before { content: "\f014"; }
+%fd-left-arrow:before { content: "\f015"; }
+%fd-up-arrow:before { content: "\f016"; }
+%fd-down-arrow:before { content: "\f017"; }
+%fd-trash:before { content: "\f018"; }
+%fd-add-doc:before { content: "\f019"; }
+%fd-edit:before { content: "\f01a"; }
+%fd-lock:before { content: "\f01b"; }
+%fd-unlock:before { content: "\f01c"; }
+%fd-refresh:before { content: "\f01d"; }
+%fd-paper-clip:before { content: "\f01e"; }
+%fd-video:before { content: "\f01f"; }
+%fd-photo:before { content: "\f020"; }
+%fd-graph:before { content: "\f021"; }
+%fd-idea:before { content: "\f022"; }
+%fd-mic:before { content: "\f023"; }
+%fd-cart:before { content: "\f024"; }
+%fd-address-book:before { content: "\f025"; }
+%fd-compass:before { content: "\f026"; }
+%fd-flag:before { content: "\f027"; }
+%fd-location:before { content: "\f028"; }
+%fd-clock:before { content: "\f029"; }
+%fd-folder:before { content: "\f02a"; }
+%fd-inbox:before { content: "\f02b"; }
+%fd-website:before { content: "\f02c"; }
+%fd-smiley:before { content: "\f02d"; }
+%fd-search:before { content: "\f02e"; }
