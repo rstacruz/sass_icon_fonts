@@ -8,11 +8,13 @@ Sass 3.2 integration for modern icon webfonts.
  * [Entypo Social][Entypo] v2.0 - *46 icons*
  * [Font Awesome] v3.0 - *249 icons, Dave Gandy, CC BY 3.0, native at 14px*
  * [Typicons] - *88 icons, Stephen Hutchings, CC BY-SA 3.0, native at 24px*
+ * [Foundation Icons] v2 - *General set icons, ZURB, MIT Open Source License, native at ?px*
 
 [Elusive]: https://github.com/aristath/elusive-iconfont
 [Font Awesome]: http://fortawesome.github.com/Font-Awesome/
 [Entypo]: http://www.entypo.com/
 [Typicons]: http://typicons.com/
+[Foundation Icons]: http://www.zurb.com/playground/foundation-icons
 
 Why is it needed?
 -----------------
@@ -117,8 +119,8 @@ Dev notes
 Acknowledgements
 ----------------
 
-Files in this repo (Sass stylesheets, build script, reference HTML) all (c) 
-  2013, Rico Sta Cruz, released under the MIT License.
+Thanks to Rico for starting this. Here's [his original Github project](http://github.com/rstacruz/sass_icon_fonts)
 
-Actual font files are not part of this project, and are available in their 
-respective licenses.
+Files in this repo (Sass stylesheets, build script, reference HTML) all (c) 2013, Rico Sta Cruz, released under the MIT License.
+
+Actual font files are not part of this project, and are available in their respective licenses.
