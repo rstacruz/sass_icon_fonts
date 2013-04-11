@@ -15,7 +15,7 @@ $fd-native-size: 14px
 $fd-path: "general_foundicons" !default
 $fd-fontName: "GeneralFoundicons"
 
-=fd-font
+= fd-font
   @font-face
     font-family: $fd-fontName
     src: url("#{$fd-path}.eot")
@@ -41,7 +41,7 @@ $fd-fontName: "GeneralFoundicons"
 //
 //     +fd-icon(music, $top: 2px)
 //
-=fd-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
+= fd-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
   @extend %fd-icon
   &:before
     @if $margin != auto
