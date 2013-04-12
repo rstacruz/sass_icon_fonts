@@ -21,7 +21,7 @@ manifest.
 
     $ open index.html
 
-or online: https://rstacruz.github.io/sass_icon_fonts
+or online: http://rstacruz.github.io/sass_icon_fonts
 
 ### Updating the website
 
