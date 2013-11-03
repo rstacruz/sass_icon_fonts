@@ -37,12 +37,16 @@ $en-path: 'entypo' !default
 //
 //     +en-icon(music, $top: 2px)
 //
-= en-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
-  @extend %en-icon
-
-  &:before
-    @if $margin != auto
-      margin-right: $margin
+= en-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none, $position: "before")
+  &:#{$position}
+    @extend %en-icon
+    @extend %en-#{$type}
+    @if $position == "before"
+      @if $margin != auto
+        margin-right: $margin
+    @if $position == "after"
+      @if $margin != auto
+        margin-left: $margin
     @if $size != auto
       font-size: $size
     @if $top != auto
@@ -53,497 +57,492 @@ $en-path: 'entypo' !default
     @if $shadow != none
       text-shadow: $shadow
 
-  +en-glyph($type)
-
-= en-glyph($type)
-  @extend %en-#{$type}
-
 %en-icon
-  &:before
-    line-height: 1em
-    font-family: 'entypo'
-    font-weight: normal
-    font-style: normal
-    display: inline-block
-    text-decoration: none
-    vertical-align: middle
-    text-rendering: optimizeLegibility !important
-    -webkit-font-smoothing: antialiased !important
+  line-height: 1em
+  font-family: 'entypo'
+  font-weight: normal
+  font-style: normal
+  display: inline-block
+  text-decoration: none
+  vertical-align: middle
+  text-rendering: optimizeLegibility !important
+  -webkit-font-smoothing: antialiased !important
+  -moz-osx-font-smoothing: grayscale
 
-%en-phone:before
+%en-phone
   content: "\1F4DE"
-%en-mobile:before
+%en-mobile
   content: "\1F4F1"
-%en-mouse:before
+%en-mouse
   content: "\E789"
-%en-address:before
+%en-address
   content: "\E723"
-%en-mail:before
+%en-mail
   content: "\2709"
-%en-paper-plane:before
+%en-paper-plane
   content: "\1F53F"
-%en-pencil:before
+%en-pencil
   content: "\270E"
-%en-feather:before
+%en-feather
   content: "\2712"
-%en-attach:before
+%en-attach
   content: "\1F4CE"
-%en-inbox:before
+%en-inbox
   content: "\E777"
-%en-reply:before
+%en-reply
   content: "\E712"
-%en-reply-all:before
+%en-reply-all
   content: "\E713"
-%en-forward:before
+%en-forward
   content: "\27A6"
-%en-user:before
+%en-user
   content: "\1F464"
-%en-users:before
+%en-users
   content: "\1F465"
-%en-add-user:before
+%en-add-user
   content: "\E700"
-%en-vcard:before
+%en-vcard
   content: "\E722"
-%en-export:before
+%en-export
   content: "\E715"
-%en-location:before
+%en-location
   content: "\E724"
-%en-map:before
+%en-map
   content: "\E727"
-%en-compass:before
+%en-compass
   content: "\E728"
-%en-direction:before
+%en-direction
   content: "\27A2"
-%en-hair-cross:before
+%en-hair-cross
   content: "\1F3AF"
-%en-share:before
+%en-share
   content: "\E73C"
-%en-shareable:before
+%en-shareable
   content: "\E73E"
-%en-heart:before
+%en-heart
   content: "\2665"
-%en-heart-empty:before
+%en-heart-empty
   content: "\2661"
-%en-star:before
+%en-star
   content: "\2605"
-%en-star-empty:before
+%en-star-empty
   content: "\2606"
-%en-thumbs-up:before
+%en-thumbs-up
   content: "\1F44D"
-%en-thumbs-down:before
+%en-thumbs-down
   content: "\1F44E"
-%en-chat:before
+%en-chat
   content: "\E720"
-%en-comment:before
+%en-comment
   content: "\E718"
-%en-quote:before
+%en-quote
   content: "\275E"
-%en-home:before
+%en-home
   content: "\2302"
-%en-popup:before
+%en-popup
   content: "\E74C"
-%en-search:before
+%en-search
   content: "\1F50D"
-%en-flashlight:before
+%en-flashlight
   content: "\1F526"
-%en-print:before
+%en-print
   content: "\E716"
-%en-bell:before
+%en-bell
   content: "\1F514"
-%en-link:before
+%en-link
   content: "\1F517"
-%en-flag:before
+%en-flag
   content: "\2691"
-%en-cog:before
+%en-cog
   content: "\2699"
-%en-tools:before
+%en-tools
   content: "\2692"
-%en-trophy:before
+%en-trophy
   content: "\1F3C6"
-%en-tag:before
+%en-tag
   content: "\E70C"
-%en-camera:before
+%en-camera
   content: "\1F4F7"
-%en-megaphone:before
+%en-megaphone
   content: "\1F4E3"
-%en-moon:before
+%en-moon
   content: "\263D"
-%en-palette:before
+%en-palette
   content: "\1F3A8"
-%en-leaf:before
+%en-leaf
   content: "\1F342"
-%en-note:before
+%en-note
   content: "\266A"
-%en-beamed-note:before
+%en-beamed-note
   content: "\266B"
-%en-new:before
+%en-new
   content: "\1F4A5"
-%en-graduation-cap:before
+%en-graduation-cap
   content: "\1F393"
-%en-book:before
+%en-book
   content: "\1F4D5"
-%en-newspaper:before
+%en-newspaper
   content: "\1F4F0"
-%en-bag:before
+%en-bag
   content: "\1F45C"
-%en-airplane:before
+%en-airplane
   content: "\2708"
-%en-lifebuoy:before
+%en-lifebuoy
   content: "\E788"
-%en-eye:before
+%en-eye
   content: "\E70A"
-%en-clock:before
+%en-clock
   content: "\1F554"
-%en-mic:before
+%en-mic
   content: "\1F3A4"
-%en-calendar:before
+%en-calendar
   content: "\1F4C5"
-%en-flash:before
+%en-flash
   content: "\26A1"
-%en-thunder-cloud:before
+%en-thunder-cloud
   content: "\26C8"
-%en-droplet:before
+%en-droplet
   content: "\1F4A7"
-%en-cd:before
+%en-cd
   content: "\1F4BF"
-%en-briefcase:before
+%en-briefcase
   content: "\1F4BC"
-%en-air:before
+%en-air
   content: "\1F4A8"
-%en-hourglass:before
+%en-hourglass
   content: "\23F3"
-%en-gauge:before
+%en-gauge
   content: "\1F6C7"
-%en-language:before
+%en-language
   content: "\1F394"
-%en-network:before
+%en-network
   content: "\E776"
-%en-key:before
+%en-key
   content: "\1F511"
-%en-battery:before
+%en-battery
   content: "\1F50B"
-%en-bucket:before
+%en-bucket
   content: "\1F4FE"
-%en-magnet:before
+%en-magnet
   content: "\E7A1"
-%en-drive:before
+%en-drive
   content: "\1F4FD"
-%en-cup:before
+%en-cup
   content: "\2615"
-%en-rocket:before
+%en-rocket
   content: "\1F680"
-%en-brush:before
+%en-brush
   content: "\E79A"
-%en-suitcase:before
+%en-suitcase
   content: "\1F6C6"
-%en-traffic-cone:before
+%en-traffic-cone
   content: "\1F6C8"
-%en-globe:before
+%en-globe
   content: "\1F30E"
-%en-keyboard:before
+%en-keyboard
   content: "\2328"
-%en-browser:before
+%en-browser
   content: "\E74E"
-%en-publish:before
+%en-publish
   content: "\E74D"
-%en-progress-3:before
+%en-progress-3
   content: "\E76B"
-%en-progress-2:before
+%en-progress-2
   content: "\E76A"
-%en-progress-1:before
+%en-progress-1
   content: "\E769"
-%en-progress-0:before
+%en-progress-0
   content: "\E768"
-%en-light-down:before
+%en-light-down
   content: "\1F505"
-%en-light-up:before
+%en-light-up
   content: "\1F506"
-%en-adjust:before
+%en-adjust
   content: "\25D1"
-%en-code:before
+%en-code
   content: "\E714"
-%en-monitor:before
+%en-monitor
   content: "\1F4BB"
-%en-infinity:before
+%en-infinity
   content: "\221E"
-%en-light-bulb:before
+%en-light-bulb
   content: "\1F4A1"
-%en-credit-card:before
+%en-credit-card
   content: "\1F4B3"
-%en-database:before
+%en-database
   content: "\1F4F8"
-%en-voicemail:before
+%en-voicemail
   content: "\2707"
-%en-clipboard:before
+%en-clipboard
   content: "\1F4CB"
-%en-cart:before
+%en-cart
   content: "\E73D"
-%en-box:before
+%en-box
   content: "\1F4E6"
-%en-ticket:before
+%en-ticket
   content: "\1F3AB"
-%en-rss:before
+%en-rss
   content: "\E73A"
-%en-signal:before
+%en-signal
   content: "\1F4F6"
-%en-thermometer:before
+%en-thermometer
   content: "\1F4FF"
-%en-water:before
+%en-water
   content: "\1F4A6"
-%en-sweden:before
+%en-sweden
   content: "\F601"
-%en-line-graph:before
+%en-line-graph
   content: "\1F4C8"
-%en-pie-chart:before
+%en-pie-chart
   content: "\25F4"
-%en-bar-graph:before
+%en-bar-graph
   content: "\1F4CA"
-%en-area-graph:before
+%en-area-graph
   content: "\1F53E"
-%en-lock:before
+%en-lock
   content: "\1F512"
-%en-lock-open:before
+%en-lock-open
   content: "\1F513"
-%en-logout:before
+%en-logout
   content: "\E741"
-%en-login:before
+%en-login
   content: "\E740"
-%en-check:before
+%en-check
   content: "\2713"
-%en-cross:before
+%en-cross
   content: "\274C"
-%en-squared-minus:before
+%en-squared-minus
   content: "\229F"
-%en-squared-plus:before
+%en-squared-plus
   content: "\229E"
-%en-squared-cross:before
+%en-squared-cross
   content: "\274E"
-%en-circled-minus:before
+%en-circled-minus
   content: "\2296"
-%en-circled-plus:before
+%en-circled-plus
   content: "\2295"
-%en-circled-cross:before
+%en-circled-cross
   content: "\2716"
-%en-minus:before
+%en-minus
   content: "\2796"
-%en-plus:before
+%en-plus
   content: "\2795"
-%en-erase:before
+%en-erase
   content: "\232B"
-%en-block:before
+%en-block
   content: "\1F6AB"
-%en-info:before
+%en-info
   content: "\2139"
-%en-circled-info:before
+%en-circled-info
   content: "\E705"
-%en-help:before
+%en-help
   content: "\2753"
-%en-circled-help:before
+%en-circled-help
   content: "\E704"
-%en-warning:before
+%en-warning
   content: "\26A0"
-%en-cycle:before
+%en-cycle
   content: "\1F504"
-%en-cw:before
+%en-cw
   content: "\27F3"
-%en-ccw:before
+%en-ccw
   content: "\27F2"
-%en-shuffle:before
+%en-shuffle
   content: "\1F500"
-%en-back:before
+%en-back
   content: "\1F519"
-%en-level-down:before
+%en-level-down
   content: "\21B3"
-%en-retweet:before
+%en-retweet
   content: "\E717"
-%en-loop:before
+%en-loop
   content: "\1F501"
-%en-back-in-time:before
+%en-back-in-time
   content: "\E771"
-%en-level-up:before
+%en-level-up
   content: "\21B0"
-%en-switch:before
+%en-switch
   content: "\21C6"
-%en-numbered-list:before
+%en-numbered-list
   content: "\E005"
-%en-add-to-list:before
+%en-add-to-list
   content: "\E003"
-%en-layout:before
+%en-layout
   content: "\268F"
-%en-list:before
+%en-list
   content: "\2630"
-%en-text-doc:before
+%en-text-doc
   content: "\1F4C4"
-%en-text-doc-inverted:before
+%en-text-doc-inverted
   content: "\E731"
-%en-doc:before
+%en-doc
   content: "\E730"
-%en-docs:before
+%en-docs
   content: "\E736"
-%en-landscape-doc:before
+%en-landscape-doc
   content: "\E737"
-%en-picture:before
+%en-picture
   content: "\1F304"
-%en-video:before
+%en-video
   content: "\1F3AC"
-%en-music:before
+%en-music
   content: "\1F3B5"
-%en-folder:before
+%en-folder
   content: "\1F4C1"
-%en-archive:before
+%en-archive
   content: "\E800"
-%en-trash:before
+%en-trash
   content: "\E729"
-%en-upload:before
+%en-upload
   content: "\1F4E4"
-%en-download:before
+%en-download
   content: "\1F4E5"
-%en-save:before
+%en-save
   content: "\1F4BE"
-%en-install:before
+%en-install
   content: "\E778"
-%en-cloud:before
+%en-cloud
   content: "\2601"
-%en-upload-cloud:before
+%en-upload-cloud
   content: "\E711"
-%en-bookmark:before
+%en-bookmark
   content: "\1F516"
-%en-bookmarks:before
+%en-bookmarks
   content: "\1F4D1"
-%en-open-book:before
+%en-open-book
   content: "\1F4D6"
-%en-play:before
+%en-play
   content: "\25B6"
-%en-pause:before
+%en-pause
   content: "\2016"
-%en-record:before
+%en-record
   content: "\25CF"
-%en-stop:before
+%en-stop
   content: "\25A0"
-%en-ff:before
+%en-ff
   content: "\23E9"
-%en-fb:before
+%en-fb
   content: "\23EA"
-%en-to-start:before
+%en-to-start
   content: "\23EE"
-%en-to-end:before
+%en-to-end
   content: "\23ED"
-%en-resize-full:before
+%en-resize-full
   content: "\E744"
-%en-resize-small:before
+%en-resize-small
   content: "\E746"
-%en-volume:before
+%en-volume
   content: "\23F7"
-%en-sound:before
+%en-sound
   content: "\1F50A"
-%en-mute:before
+%en-mute
   content: "\1F507"
-%en-flow-cascade:before
+%en-flow-cascade
   content: "\1F568"
-%en-flow-branch:before
+%en-flow-branch
   content: "\1F569"
-%en-flow-tree:before
+%en-flow-tree
   content: "\1F56A"
-%en-flow-line:before
+%en-flow-line
   content: "\1F56B"
-%en-flow-parallel:before
+%en-flow-parallel
   content: "\1F56C"
-%en-left-bold:before
+%en-left-bold
   content: "\E4AD"
-%en-down-bold:before
+%en-down-bold
   content: "\E4B0"
-%en-up-bold:before
+%en-up-bold
   content: "\E4AF"
-%en-right-bold:before
+%en-right-bold
   content: "\E4AE"
-%en-left:before
+%en-left
   content: "\2B05"
-%en-down:before
+%en-down
   content: "\2B07"
-%en-up:before
+%en-up
   content: "\2B06"
-%en-right:before
+%en-right
   content: "\27A1"
-%en-circled-left:before
+%en-circled-left
   content: "\E759"
-%en-circled-down:before
+%en-circled-down
   content: "\E758"
-%en-circled-up:before
+%en-circled-up
   content: "\E75B"
-%en-circled-right:before
+%en-circled-right
   content: "\E75A"
-%en-triangle-left:before
+%en-triangle-left
   content: "\25C2"
-%en-triangle-down:before
+%en-triangle-down
   content: "\25BE"
-%en-triangle-up:before
+%en-triangle-up
   content: "\25B4"
-%en-triangle-right:before
+%en-triangle-right
   content: "\25B8"
-%en-chevron-left:before
+%en-chevron-left
   content: "\E75D"
-%en-chevron-down:before
+%en-chevron-down
   content: "\E75C"
-%en-chevron-up:before
+%en-chevron-up
   content: "\E75F"
-%en-chevron-right:before
+%en-chevron-right
   content: "\E75E"
-%en-chevron-small-left:before
+%en-chevron-small-left
   content: "\E761"
-%en-chevron-small-down:before
+%en-chevron-small-down
   content: "\E760"
-%en-chevron-small-up:before
+%en-chevron-small-up
   content: "\E763"
-%en-chevron-small-right:before
+%en-chevron-small-right
   content: "\E762"
-%en-chevron-thin-left:before
+%en-chevron-thin-left
   content: "\E765"
-%en-chevron-thin-down:before
+%en-chevron-thin-down
   content: "\E764"
-%en-chevron-thin-up:before
+%en-chevron-thin-up
   content: "\E767"
-%en-chevron-thin-right:before
+%en-chevron-thin-right
   content: "\E766"
-%en-left-thin:before
+%en-left-thin
   content: "\2190"
-%en-down-thin:before
+%en-down-thin
   content: "\2193"
-%en-up-thin:before
+%en-up-thin
   content: "\2191"
-%en-right-thin:before
+%en-right-thin
   content: "\2192"
-%en-arrow-combo:before
+%en-arrow-combo
   content: "\E74F"
-%en-three-dots:before
+%en-three-dots
   content: "\23F6"
-%en-two-dots:before
+%en-two-dots
   content: "\23F5"
-%en-dot:before
+%en-dot
   content: "\23F4"
-%en-cc:before
+%en-cc
   content: "\1F545"
-%en-cc-by:before
+%en-cc-by
   content: "\1F546"
-%en-cc-nc:before
+%en-cc-nc
   content: "\1F547"
-%en-cc-nc-eu:before
+%en-cc-nc-eu
   content: "\1F548"
-%en-cc-nc-jp:before
+%en-cc-nc-jp
   content: "\1F549"
-%en-cc-sa:before
+%en-cc-sa
   content: "\1F54A"
-%en-cc-nd:before
+%en-cc-nd
   content: "\1F54B"
-%en-cc-pd:before
+%en-cc-pd
   content: "\1F54C"
-%en-cc-zero:before
+%en-cc-zero
   content: "\1F54D"
-%en-cc-share:before
+%en-cc-share
   content: "\1F54E"
-%en-cc-remix:before
+%en-cc-remix
   content: "\1F54F"
-%en-db-logo:before
+%en-db-logo
   content: "\1F5F9"
-%en-db-shape:before
+%en-db-shape
   content: "\1F5FA"
 

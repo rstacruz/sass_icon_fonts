@@ -37,12 +37,16 @@ $es-path: 'entypo-social' !default
 //
 //     +es-icon(music, $top: 2px)
 //
-= es-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
-  @extend %es-icon
-
-  &:before
-    @if $margin != auto
-      margin-right: $margin
+= es-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none, $position: "before")
+  &:#{$position}
+    @extend %es-icon
+    @extend %es-#{$type}
+    @if $position == "before"
+      @if $margin != auto
+        margin-right: $margin
+    @if $position == "after"
+      @if $margin != auto
+        margin-left: $margin
     @if $size != auto
       font-size: $size
     @if $top != auto
@@ -53,112 +57,107 @@ $es-path: 'entypo-social' !default
     @if $shadow != none
       text-shadow: $shadow
 
-  +es-glyph($type)
-
-= es-glyph($type)
-  @extend %es-#{$type}
-
 %es-icon
-  &:before
-    line-height: 1em
-    font-family: 'entypo-social'
-    font-weight: normal
-    font-style: normal
-    display: inline-block
-    text-decoration: none
-    vertical-align: middle
-    text-rendering: optimizeLegibility !important
-    -webkit-font-smoothing: antialiased !important
+  line-height: 1em
+  font-family: 'entypo-social'
+  font-weight: normal
+  font-style: normal
+  display: inline-block
+  text-decoration: none
+  vertical-align: middle
+  text-rendering: optimizeLegibility !important
+  -webkit-font-smoothing: antialiased !important
+  -moz-osx-font-smoothing: grayscale
 
-%es-github:before
+%es-github
   content: "\F300"
-%es-c-github:before
+%es-c-github
   content: "\F301"
-%es-flickr:before
+%es-flickr
   content: "\F303"
-%es-c-flickr:before
+%es-c-flickr
   content: "\F304"
-%es-vimeo:before
+%es-vimeo
   content: "\F306"
-%es-c-vimeo:before
+%es-c-vimeo
   content: "\F307"
-%es-twitter:before
+%es-twitter
   content: "\F309"
-%es-c-twitter:before
+%es-c-twitter
   content: "\F30A"
-%es-facebook:before
+%es-facebook
   content: "\F30C"
-%es-c-facebook:before
+%es-c-facebook
   content: "\F30D"
-%es-s-facebook:before
+%es-s-facebook
   content: "\F30E"
-%es-google-plus:before
+%es-google-plus
   content: "\F30F"
-%es-c-google-plus:before
+%es-c-google-plus
   content: "\F310"
-%es-pinterest:before
+%es-pinterest
   content: "\F312"
-%es-c-pinterest:before
+%es-c-pinterest
   content: "\F313"
-%es-tumblr:before
+%es-tumblr
   content: "\F315"
-%es-c-tumblr:before
+%es-c-tumblr
   content: "\F316"
-%es-linkedin:before
+%es-linkedin
   content: "\F318"
-%es-c-linkedin:before
+%es-c-linkedin
   content: "\F319"
-%es-dribbble:before
+%es-dribbble
   content: "\F31B"
-%es-c-dribbble:before
+%es-c-dribbble
   content: "\F31C"
-%es-stumbleupon:before
+%es-stumbleupon
   content: "\F31E"
-%es-c-stumbleupon:before
+%es-c-stumbleupon
   content: "\F31F"
-%es-lastfm:before
+%es-lastfm
   content: "\F321"
-%es-c-lastfm:before
+%es-c-lastfm
   content: "\F322"
-%es-rdio:before
+%es-rdio
   content: "\F324"
-%es-c-rdio:before
+%es-c-rdio
   content: "\F325"
-%es-spotify:before
+%es-spotify
   content: "\F327"
-%es-c-spotify:before
+%es-c-spotify
   content: "\F328"
-%es-qq:before
+%es-qq
   content: "\F32A"
-%es-instagram:before
+%es-instagram
   content: "\F32D"
-%es-dropbox:before
+%es-dropbox
   content: "\F330"
-%es-evernote:before
+%es-evernote
   content: "\F333"
-%es-flattr:before
+%es-flattr
   content: "\F336"
-%es-skype:before
+%es-skype
   content: "\F339"
-%es-c-skype:before
+%es-c-skype
   content: "\F33A"
-%es-renren:before
+%es-renren
   content: "\F33C"
-%es-sina-weibo:before
+%es-sina-weibo
   content: "\F33F"
-%es-paypal:before
+%es-paypal
   content: "\F342"
-%es-picasa:before
+%es-picasa
   content: "\F345"
-%es-soundcloud:before
+%es-soundcloud
   content: "\F348"
-%es-mixi:before
+%es-mixi
   content: "\F34B"
-%es-behance:before
+%es-behance
   content: "\F34E"
-%es-google-circles:before
+%es-google-circles
   content: "\F351"
-%es-vk:before
+%es-vk
   content: "\F354"
-%es-smashing:before
+%es-smashing
   content: "\F357"

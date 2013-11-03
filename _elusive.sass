@@ -37,12 +37,16 @@ $el-path: 'Elusive-Icons' !default
 //
 //     +el-icon(music, $top: 2px)
 //
-= el-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none)
-  @extend %el-icon
-
-  &:before
-    @if $margin != auto
-      margin-right: $margin
+= el-icon($type, $size: auto, $margin: auto, $color: auto, $top: auto, $shadow: none, $position: "before")
+  &:#{$position}
+    @extend %el-icon
+    @extend %el-#{$type}
+    @if $position == "before"
+      @if $margin != auto
+        margin-right: $margin
+    @if $position == "after"
+      @if $margin != auto
+        margin-left: $margin
     @if $size != auto
       font-size: $size
     @if $top != auto
@@ -53,563 +57,558 @@ $el-path: 'Elusive-Icons' !default
     @if $shadow != none
       text-shadow: $shadow
 
-  +el-glyph($type)
-
-= el-glyph($type)
-  @extend %el-#{$type}
-
 %el-icon
-  &:before
-    line-height: 1em
-    font-family: Elusive-Icons
-    font-weight: normal
-    font-style: normal
-    display: inline-block
-    text-decoration: none
-    vertical-align: middle
-    text-rendering: optimizeLegibility !important
-    -webkit-font-smoothing: antialiased !important
+  line-height: 1em
+  font-family: Elusive-Icons
+  font-weight: normal
+  font-style: normal
+  display: inline-block
+  text-decoration: none
+  vertical-align: middle
+  text-rendering: optimizeLegibility !important
+  -webkit-font-smoothing: antialiased !important
+  -moz-osx-font-smoothing: grayscale
 
-%el-briefcase:before
+%el-briefcase
   content: "\e10d"
-%el-bullhorn:before
+%el-bullhorn
   content: "\e10c"
-%el-calendar:before
+%el-calendar
   content: "\e10b"
-%el-calendar-sign:before
+%el-calendar-sign
   content: "\e10a"
-%el-cog:before
+%el-cog
   content: "\e109"
-%el-cog-alt:before
+%el-cog-alt
   content: "\e108"
-%el-cogs:before
+%el-cogs
   content: "\e107"
-%el-comment:before
+%el-comment
   content: "\e106"
-%el-error:before
+%el-error
   content: "\e105"
-%el-error-alt:before
+%el-error-alt
   content: "\e104"
-%el-exclamation-sign:before
+%el-exclamation-sign
   content: "\e103"
-%el-eye-close:before
+%el-eye-close
   content: "\e102"
-%el-flag-alt:before
+%el-flag-alt
   content: "\e101"
-%el-flickr:before
+%el-flickr
   content: "\e100"
-%el-folder:before
+%el-folder
   content: "\e0ff"
-%el-folder-close:before
+%el-folder-close
   content: "\e0fe"
-%el-globe-alt:before
+%el-globe-alt
   content: "\e0fd"
-%el-googleplus:before
+%el-googleplus
   content: "\e0fc"
-%el-graph:before
+%el-graph
   content: "\e0fb"
-%el-graph-alt:before
+%el-graph-alt
   content: "\e0fa"
-%el-idea-alt:before
+%el-idea-alt
   content: "\e0f9"
-%el-inbox:before
+%el-inbox
   content: "\e0f8"
-%el-inbox-alt:before
+%el-inbox-alt
   content: "\e0f7"
-%el-inbox-box:before
+%el-inbox-box
   content: "\e0f6"
-%el-book:before
+%el-book
   content: "\e0f5"
-%el-bookmark:before
+%el-bookmark
   content: "\e0f4"
-%el-bookmark-empty:before
+%el-bookmark-empty
   content: "\e0f3"
-%el-braille:before
+%el-braille
   content: "\e0f2"
-%el-circle-arrow-right:before
+%el-circle-arrow-right
   content: "\e0f1"
-%el-circle-arrow-up:before
+%el-circle-arrow-up
   content: "\e0f0"
-%el-cloud:before
+%el-cloud
   content: "\e0ef"
-%el-cloud-alt:before
+%el-cloud-alt
   content: "\e0ee"
-%el-edit:before
+%el-edit
   content: "\e0ed"
-%el-eject:before
+%el-eject
   content: "\e0ec"
-%el-envelope:before
+%el-envelope
   content: "\e0eb"
-%el-envelope-alt:before
+%el-envelope-alt
   content: "\e0ea"
-%el-film:before
+%el-film
   content: "\e0e9"
-%el-filter:before
+%el-filter
   content: "\e0e8"
-%el-fire:before
+%el-fire
   content: "\e0e7"
-%el-flag:before
+%el-flag
   content: "\e0e6"
-%el-github-text:before
+%el-github-text
   content: "\e0e5"
-%el-glass:before
+%el-glass
   content: "\e0e4"
-%el-glasses:before
+%el-glasses
   content: "\e0e3"
-%el-globe:before
+%el-globe
   content: "\e0e2"
-%el-heart-empty:before
+%el-heart-empty
   content: "\e0e1"
-%el-home:before
+%el-home
   content: "\e0e0"
-%el-home-alt:before
+%el-home-alt
   content: "\e0df"
-%el-idea:before
+%el-idea
   content: "\e0de"
-%el-address-book:before
+%el-address-book
   content: "\e0dd"
-%el-address-book-alt:before
+%el-address-book-alt
   content: "\e0dc"
-%el-adjust:before
+%el-adjust
   content: "\e0db"
-%el-adult:before
+%el-adult
   content: "\e0da"
-%el-align-center:before
+%el-align-center
   content: "\e0d9"
-%el-align-justify:before
+%el-align-justify
   content: "\e0d8"
-%el-align-left:before
+%el-align-left
   content: "\e0d7"
-%el-align-right:before
+%el-align-right
   content: "\e0d6"
-%el-arrow-down:before
+%el-arrow-down
   content: "\e0d5"
-%el-arrow-left:before
+%el-arrow-left
   content: "\e0d4"
-%el-barcode:before
+%el-barcode
   content: "\e0d3"
-%el-behance:before
+%el-behance
   content: "\e0d2"
-%el-bell:before
+%el-bell
   content: "\e0d1"
-%el-blind:before
+%el-blind
   content: "\e0d0"
-%el-blogger:before
+%el-blogger
   content: "\e0cf"
-%el-bold:before
+%el-bold
   content: "\e0ce"
-%el-chevron-left:before
+%el-chevron-left
   content: "\e0cd"
-%el-chevron-right:before
+%el-chevron-right
   content: "\e0cc"
-%el-chevron-up:before
+%el-chevron-up
   content: "\e0cb"
-%el-child:before
+%el-child
   content: "\e0ca"
-%el-circle-arrow-down:before
+%el-circle-arrow-down
   content: "\e0c9"
-%el-circle-arrow-left:before
+%el-circle-arrow-left
   content: "\e0c8"
-%el-delicious:before
+%el-delicious
   content: "\e0c7"
-%el-deviantart:before
+%el-deviantart
   content: "\e0c6"
-%el-digg:before
+%el-digg
   content: "\e0c5"
-%el-download:before
+%el-download
   content: "\e0c4"
-%el-download-alt:before
+%el-download-alt
   content: "\e0c3"
-%el-dribble:before
+%el-dribble
   content: "\e0c2"
-%el-file:before
+%el-file
   content: "\e0c1"
-%el-file-alt:before
+%el-file-alt
   content: "\e0c0"
-%el-file-edit:before
+%el-file-edit
   content: "\e0bf"
-%el-file-edit-alt:before
+%el-file-edit-alt
   content: "\e0be"
-%el-file-new:before
+%el-file-new
   content: "\e0bd"
-%el-file-new-alt:before
+%el-file-new-alt
   content: "\e0bc"
-%el-foursquare:before
+%el-foursquare
   content: "\e0bb"
-%el-friendfeed:before
+%el-friendfeed
   content: "\e0ba"
-%el-friendfeed-rect:before
+%el-friendfeed-rect
   content: "\e0b9"
-%el-fullscreen:before
+%el-fullscreen
   content: "\e0b8"
-%el-gift:before
+%el-gift
   content: "\e0b7"
-%el-github:before
+%el-github
   content: "\e0b6"
-%el-hand-up:before
+%el-hand-up
   content: "\e0b5"
-%el-hdd:before
+%el-hdd
   content: "\e0b4"
-%el-headphones:before
+%el-headphones
   content: "\e0b3"
-%el-hearing-impaired:before
+%el-hearing-impaired
   content: "\e0b2"
-%el-heart:before
+%el-heart
   content: "\e0b1"
-%el-heart-alt:before
+%el-heart-alt
   content: "\e0b0"
-%el-arrow-right:before
+%el-arrow-right
   content: "\e0af"
-%el-arrow-up:before
+%el-arrow-up
   content: "\e0ae"
-%el-asl:before
+%el-asl
   content: "\e0ad"
-%el-asterisk:before
+%el-asterisk
   content: "\e0ac"
-%el-backward:before
+%el-backward
   content: "\e0ab"
-%el-ban-circle:before
+%el-ban-circle
   content: "\e0aa"
-%el-camera:before
+%el-camera
   content: "\e0a9"
-%el-cc:before
+%el-cc
   content: "\e0a8"
-%el-certificate:before
+%el-certificate
   content: "\e0a7"
-%el-check:before
+%el-check
   content: "\e0a6"
-%el-check-empty:before
+%el-check-empty
   content: "\e0a5"
-%el-chevron-down:before
+%el-chevron-down
   content: "\e0a4"
-%el-comment-alt:before
+%el-comment-alt
   content: "\e0a3"
-%el-compass:before
+%el-compass
   content: "\e0a2"
-%el-compass-alt:before
+%el-compass-alt
   content: "\e0a1"
-%el-credit-card:before
+%el-credit-card
   content: "\e0a0"
-%el-css:before
+%el-css
   content: "\e09f"
-%el-dashboard:before
+%el-dashboard
   content: "\e09e"
-%el-eye-open:before
+%el-eye-open
   content: "\e09d"
-%el-facebook:before
+%el-facebook
   content: "\e09c"
-%el-facetime-video:before
+%el-facetime-video
   content: "\e09b"
-%el-fast-backward:before
+%el-fast-backward
   content: "\e09a"
-%el-fast-forward:before
+%el-fast-forward
   content: "\e099"
-%el-female:before
+%el-female
   content: "\e098"
-%el-folder-open:before
+%el-folder-open
   content: "\e097"
-%el-folder-sign:before
+%el-folder-sign
   content: "\e096"
-%el-font:before
+%el-font
   content: "\e095"
-%el-fontsize:before
+%el-fontsize
   content: "\e094"
-%el-forward:before
+%el-forward
   content: "\e093"
-%el-forward-alt:before
+%el-forward-alt
   content: "\e092"
-%el-group:before
+%el-group
   content: "\e091"
-%el-group-alt:before
+%el-group-alt
   content: "\e090"
-%el-guidedog:before
+%el-guidedog
   content: "\e08f"
-%el-hand-down:before
+%el-hand-down
   content: "\e08e"
-%el-hand-left:before
+%el-hand-left
   content: "\e08d"
-%el-hand-right:before
+%el-hand-right
   content: "\e08c"
-%el-indent-left:before
+%el-indent-left
   content: "\e08b"
-%el-indent-right:before
+%el-indent-right
   content: "\e08a"
-%el-info-sign:before
+%el-info-sign
   content: "\e089"
-%el-instagram:before
+%el-instagram
   content: "\e088"
-%el-iphone-home:before
+%el-iphone-home
   content: "\e087"
-%el-italic:before
+%el-italic
   content: "\e086"
-%el-key:before
+%el-key
   content: "\e085"
-%el-laptop:before
+%el-laptop
   content: "\e084"
-%el-laptop-alt:before
+%el-laptop-alt
   content: "\e083"
-%el-leaf:before
+%el-leaf
   content: "\e082"
-%el-linkedin:before
+%el-linkedin
   content: "\e081"
-%el-list:before
+%el-list
   content: "\e080"
-%el-list-alt:before
+%el-list-alt
   content: "\e07f"
-%el-lock:before
+%el-lock
   content: "\e07e"
-%el-lock-alt:before
+%el-lock-alt
   content: "\e07d"
-%el-magnet:before
+%el-magnet
   content: "\e07c"
-%el-male:before
+%el-male
   content: "\e07b"
-%el-map-marker:before
+%el-map-marker
   content: "\e07a"
-%el-map-marker-alt:before
+%el-map-marker-alt
   content: "\e079"
-%el-mic:before
+%el-mic
   content: "\e078"
-%el-mic-alt:before
+%el-mic-alt
   content: "\e077"
-%el-minus:before
+%el-minus
   content: "\e076"
-%el-minus-sign:before
+%el-minus-sign
   content: "\e075"
-%el-move:before
+%el-move
   content: "\e074"
-%el-music:before
+%el-music
   content: "\e073"
-%el-network:before
+%el-network
   content: "\e072"
-%el-off:before
+%el-off
   content: "\e071"
-%el-ok:before
+%el-ok
   content: "\e070"
-%el-ok-circle:before
+%el-ok-circle
   content: "\e06f"
-%el-ok-sign:before
+%el-ok-sign
   content: "\e06e"
-%el-paper-clip:before
+%el-paper-clip
   content: "\e06d"
-%el-paper-clip-alt:before
+%el-paper-clip-alt
   content: "\e06c"
-%el-path:before
+%el-path
   content: "\e06b"
-%el-pause:before
+%el-pause
   content: "\e06a"
-%el-pause-alt:before
+%el-pause-alt
   content: "\e069"
-%el-pencil:before
+%el-pencil
   content: "\e068"
-%el-pencil-alt:before
+%el-pencil-alt
   content: "\e067"
-%el-person:before
+%el-person
   content: "\e066"
-%el-phone:before
+%el-phone
   content: "\e065"
-%el-phone-alt:before
+%el-phone-alt
   content: "\e064"
-%el-photo:before
+%el-photo
   content: "\e063"
-%el-photo-alt:before
+%el-photo-alt
   content: "\e062"
-%el-picasa:before
+%el-picasa
   content: "\e061"
-%el-picture:before
+%el-picture
   content: "\e060"
-%el-pinterest:before
+%el-pinterest
   content: "\e05f"
-%el-plane:before
+%el-plane
   content: "\e05e"
-%el-play:before
+%el-play
   content: "\e05d"
-%el-play-alt:before
+%el-play-alt
   content: "\e05c"
-%el-play-circle:before
+%el-play-circle
   content: "\e05b"
-%el-plus:before
+%el-plus
   content: "\e05a"
-%el-plus-sign:before
+%el-plus-sign
   content: "\e059"
-%el-print:before
+%el-print
   content: "\e058"
-%el-qrcode:before
+%el-qrcode
   content: "\e057"
-%el-question:before
+%el-question
   content: "\e056"
-%el-question-sign:before
+%el-question-sign
   content: "\e055"
-%el-quotes:before
+%el-quotes
   content: "\e054"
-%el-quotes-alt:before
+%el-quotes-alt
   content: "\e053"
-%el-random:before
+%el-random
   content: "\e052"
-%el-record:before
+%el-record
   content: "\e051"
-%el-reddit:before
+%el-reddit
   content: "\e050"
-%el-refresh:before
+%el-refresh
   content: "\e04f"
-%el-remove:before
+%el-remove
   content: "\e04e"
-%el-remove-circle:before
+%el-remove-circle
   content: "\e04d"
-%el-remove-sign:before
+%el-remove-sign
   content: "\e04c"
-%el-repeat:before
+%el-repeat
   content: "\e04b"
-%el-repeat-alt:before
+%el-repeat-alt
   content: "\e04a"
-%el-resize-full:before
+%el-resize-full
   content: "\e049"
-%el-resize-horizontal:before
+%el-resize-horizontal
   content: "\e048"
-%el-resize-small:before
+%el-resize-small
   content: "\e047"
-%el-resize-vertical:before
+%el-resize-vertical
   content: "\e046"
-%el-retweet:before
+%el-retweet
   content: "\e045"
-%el-reverse-alt:before
+%el-reverse-alt
   content: "\e044"
-%el-road:before
+%el-road
   content: "\e043"
-%el-rss:before
+%el-rss
   content: "\e042"
-%el-screen:before
+%el-screen
   content: "\e041"
-%el-screen-alt:before
+%el-screen-alt
   content: "\e040"
-%el-screenshot:before
+%el-screenshot
   content: "\e03f"
-%el-search:before
+%el-search
   content: "\e03e"
-%el-search-alt:before
+%el-search-alt
   content: "\e03d"
-%el-share:before
+%el-share
   content: "\e03c"
-%el-share-alt:before
+%el-share-alt
   content: "\e03b"
-%el-shopping-cart:before
+%el-shopping-cart
   content: "\e03a"
-%el-shopping-cart-sign:before
+%el-shopping-cart-sign
   content: "\e039"
-%el-signal:before
+%el-signal
   content: "\e038"
-%el-skype:before
+%el-skype
   content: "\e037"
-%el-slideshare:before
+%el-slideshare
   content: "\e036"
-%el-smiley:before
+%el-smiley
   content: "\e035"
-%el-smiley-alt:before
+%el-smiley-alt
   content: "\e034"
-%el-speaker:before
+%el-speaker
   content: "\e033"
-%el-stackoverflow:before
+%el-stackoverflow
   content: "\e032"
-%el-star:before
+%el-star
   content: "\e031"
-%el-star-alt:before
+%el-star-alt
   content: "\e030"
-%el-star-empty:before
+%el-star-empty
   content: "\e02f"
-%el-step-backward:before
+%el-step-backward
   content: "\e02e"
-%el-step-forward:before
+%el-step-forward
   content: "\e02d"
-%el-stop:before
+%el-stop
   content: "\e02c"
-%el-stop-alt:before
+%el-stop-alt
   content: "\e02b"
-%el-stumbleupon:before
+%el-stumbleupon
   content: "\e02a"
-%el-tag:before
+%el-tag
   content: "\e029"
-%el-tags:before
+%el-tags
   content: "\e028"
-%el-tasks:before
+%el-tasks
   content: "\e027"
-%el-text-height:before
+%el-text-height
   content: "\e026"
-%el-text-width:before
+%el-text-width
   content: "\e025"
-%el-th:before
+%el-th
   content: "\e024"
-%el-th-large:before
+%el-th-large
   content: "\e023"
-%el-th-list:before
+%el-th-list
   content: "\e022"
-%el-thumbs-down:before
+%el-thumbs-down
   content: "\e021"
-%el-thumbs-up:before
+%el-thumbs-up
   content: "\e020"
-%el-time:before
+%el-time
   content: "\e01f"
-%el-time-alt:before
+%el-time-alt
   content: "\e01e"
-%el-tint:before
+%el-tint
   content: "\e01d"
-%el-torso:before
+%el-torso
   content: "\e01c"
-%el-trash:before
+%el-trash
   content: "\e01b"
-%el-trash-alt:before
+%el-trash-alt
   content: "\e01a"
-%el-tumblr:before
+%el-tumblr
   content: "\e019"
-%el-twitter:before
+%el-twitter
   content: "\e018"
-%el-universal-access:before
+%el-universal-access
   content: "\e017"
-%el-unlock:before
+%el-unlock
   content: "\e016"
-%el-unlock-alt:before
+%el-unlock-alt
   content: "\e015"
-%el-upload:before
+%el-upload
   content: "\e014"
-%el-user:before
+%el-user
   content: "\e013"
-%el-video:before
+%el-video
   content: "\e012"
-%el-video-alt:before
+%el-video-alt
   content: "\e011"
-%el-video-chat:before
+%el-video-chat
   content: "\e010"
-%el-view-mode:before
+%el-view-mode
   content: "\e00f"
-%el-vimeo:before
+%el-vimeo
   content: "\e00e"
-%el-volume-down:before
+%el-volume-down
   content: "\e00d"
-%el-volume-off:before
+%el-volume-off
   content: "\e00c"
-%el-volume-up:before
+%el-volume-up
   content: "\e00b"
-%el-w3c:before
+%el-w3c
   content: "\e00a"
-%el-warning-sign:before
+%el-warning-sign
   content: "\e009"
-%el-website:before
+%el-website
   content: "\e008"
-%el-website-alt:before
+%el-website-alt
   content: "\e007"
-%el-wheelchair:before
+%el-wheelchair
   content: "\e006"
-%el-wordpress:before
+%el-wordpress
   content: "\e005"
-%el-wrench:before
+%el-wrench
   content: "\e004"
-%el-wrench-alt:before
+%el-wrench-alt
   content: "\e003"
-%el-youtube:before
+%el-youtube
   content: "\e002"
-%el-zoom-in:before
+%el-zoom-in
   content: "\e001"
-%el-zoom-out:before
+%el-zoom-out
   content: "\e000"
-%el-vkontakte:before
+%el-vkontakte
   content: "\e10e"
 
