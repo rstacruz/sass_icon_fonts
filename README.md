@@ -34,11 +34,22 @@ First, include the font-face definition somewhere like so:
 +fa-font
 ```
 
+``` scss
+@import "entypo";
+@include en-font;
+```
+
 Then use the `*-icon` mixin:
 
 ``` sass
 button.add
   +fa-icon(plus, 24px)
+```
+
+``` scss
+button.add {
+  @include en-icon("plus", 24px);
+}
 ```
 
 Mixin usage
