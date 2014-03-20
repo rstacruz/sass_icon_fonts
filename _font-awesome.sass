@@ -3,8 +3,8 @@
 //
 // Website: http://fontawesome.io
 
-$fa-path: "//netdna.bootstrapcdn.com/font-awesome/4.0.1/fonts" !default
-$fa-version: "4.0.1" !default
+$fa-path: "//netdna.bootstrapcdn.com/font-awesome/4.0.3/fonts" !default
+$fa-version: "4.0.3" !default
 
 =fa-font
   @font-face
@@ -129,7 +129,7 @@ $fa-var-tint: "\f043"
 $fa-var-pencil-square-o: "\f044"
 $fa-var-share-square-o: "\f045"
 $fa-var-check-square-o: "\f046"
-$fa-var-move: "\f047"
+$fa-var-arrows: "\f047"
 $fa-var-step-backward: "\f048"
 $fa-var-fast-backward: "\f049"
 $fa-var-backward: "\f04a"
@@ -157,8 +157,8 @@ $fa-var-arrow-right: "\f061"
 $fa-var-arrow-up: "\f062"
 $fa-var-arrow-down: "\f063"
 $fa-var-share: "\f064"
-$fa-var-resize-full: "\f065"
-$fa-var-resize-small: "\f066"
+$fa-var-expand: "\f065"
+$fa-var-compress: "\f066"
 $fa-var-plus: "\f067"
 $fa-var-minus: "\f068"
 $fa-var-asterisk: "\f069"
@@ -180,8 +180,8 @@ $fa-var-retweet: "\f079"
 $fa-var-shopping-cart: "\f07a"
 $fa-var-folder: "\f07b"
 $fa-var-folder-open: "\f07c"
-$fa-var-resize-vertical: "\f07d"
-$fa-var-resize-horizontal: "\f07e"
+$fa-var-arrows-v: "\f07d"
+$fa-var-arrows-h: "\f07e"
 $fa-var-bar-chart-o: "\f080"
 $fa-var-twitter-square: "\f081"
 $fa-var-facebook-square: "\f082"
@@ -229,8 +229,8 @@ $fa-var-wrench: "\f0ad"
 $fa-var-tasks: "\f0ae"
 $fa-var-filter: "\f0b0"
 $fa-var-briefcase: "\f0b1"
-$fa-var-fullscreen: "\f0b2"
-$fa-var-group: "\f0c0"
+$fa-var-arrows-alt: "\f0b2"
+$fa-var-users: "\f0c0"
 $fa-var-link: "\f0c1"
 $fa-var-cloud: "\f0c2"
 $fa-var-flask: "\f0c3"
@@ -239,7 +239,7 @@ $fa-var-files-o: "\f0c5"
 $fa-var-paperclip: "\f0c6"
 $fa-var-floppy-o: "\f0c7"
 $fa-var-square: "\f0c8"
-$fa-var-reorder: "\f0c9"
+$fa-var-bars: "\f0c9"
 $fa-var-list-ul: "\f0ca"
 $fa-var-list-ol: "\f0cb"
 $fa-var-strikethrough: "\f0cc"
@@ -282,8 +282,8 @@ $fa-var-bell-o: "\f0a2"
 $fa-var-coffee: "\f0f4"
 $fa-var-cutlery: "\f0f5"
 $fa-var-file-text-o: "\f0f6"
-$fa-var-building: "\f0f7"
-$fa-var-hospital: "\f0f8"
+$fa-var-building-o: "\f0f7"
+$fa-var-hospital-o: "\f0f8"
 $fa-var-ambulance: "\f0f9"
 $fa-var-medkit: "\f0fa"
 $fa-var-fighter-jet: "\f0fb"
@@ -311,8 +311,6 @@ $fa-var-reply: "\f112"
 $fa-var-github-alt: "\f113"
 $fa-var-folder-o: "\f114"
 $fa-var-folder-open-o: "\f115"
-$fa-var-expand-o: "\f116"
-$fa-var-collapse-o: "\f117"
 $fa-var-smile-o: "\f118"
 $fa-var-frown-o: "\f119"
 $fa-var-meh-o: "\f11a"
@@ -350,10 +348,10 @@ $fa-var-chevron-circle-down: "\f13a"
 $fa-var-html5: "\f13b"
 $fa-var-css3: "\f13c"
 $fa-var-anchor: "\f13d"
-$fa-var-unlock-o: "\f13e"
+$fa-var-unlock-alt: "\f13e"
 $fa-var-bullseye: "\f140"
-$fa-var-ellipsis-horizontal: "\f141"
-$fa-var-ellipsis-vertical: "\f142"
+$fa-var-ellipsis-h: "\f141"
+$fa-var-ellipsis-v: "\f142"
 $fa-var-rss-square: "\f143"
 $fa-var-play-circle: "\f144"
 $fa-var-ticket: "\f145"
@@ -432,6 +430,7 @@ $fa-var-dot-circle-o: "\f192"
 $fa-var-wheelchair: "\f193"
 $fa-var-vimeo-square: "\f194"
 $fa-var-try: "\f195"
+$fa-var-plus-square-o: "\f196"
 
 %fa-glass
   content: $fa-var-glass
@@ -638,8 +637,8 @@ $fa-var-try: "\f195"
 %fa-check-square-o
   content: $fa-var-check-square-o
 
-%fa-move
-  content: $fa-var-move
+%fa-arrows
+  content: $fa-var-arrows
 
 %fa-step-backward
   content: $fa-var-step-backward
@@ -723,11 +722,11 @@ $fa-var-try: "\f195"
 %fa-share
   content: $fa-var-share
 
-%fa-resize-full
-  content: $fa-var-resize-full
+%fa-expand
+  content: $fa-var-expand
 
-%fa-resize-small
-  content: $fa-var-resize-small
+%fa-compress
+  content: $fa-var-compress
 
 %fa-plus
   content: $fa-var-plus
@@ -793,11 +792,11 @@ $fa-var-try: "\f195"
 %fa-folder-open
   content: $fa-var-folder-open
 
-%fa-resize-vertical
-  content: $fa-var-resize-vertical
+%fa-arrows-v
+  content: $fa-var-arrows-v
 
-%fa-resize-horizontal
-  content: $fa-var-resize-horizontal
+%fa-arrows-h
+  content: $fa-var-arrows-h
 
 %fa-bar-chart-o
   content: $fa-var-bar-chart-o
@@ -941,11 +940,12 @@ $fa-var-try: "\f195"
 %fa-briefcase
   content: $fa-var-briefcase
 
-%fa-fullscreen
-  content: $fa-var-fullscreen
+%fa-arrows-alt
+  content: $fa-var-arrows-alt
 
-%fa-group
-  content: $fa-var-group
+%fa-group,
+%fa-users
+  content: $fa-var-users
 
 %fa-chain,
 %fa-link
@@ -975,8 +975,8 @@ $fa-var-try: "\f195"
 %fa-square
   content: $fa-var-square
 
-%fa-reorder
-  content: $fa-var-reorder
+%fa-bars
+  content: $fa-var-bars
 
 %fa-list-ul
   content: $fa-var-list-ul
@@ -1112,11 +1112,11 @@ $fa-var-try: "\f195"
 %fa-file-text-o
   content: $fa-var-file-text-o
 
-%fa-building
-  content: $fa-var-building
+%fa-building-o
+  content: $fa-var-building-o
 
-%fa-hospital
-  content: $fa-var-hospital
+%fa-hospital-o
+  content: $fa-var-hospital-o
 
 %fa-ambulance
   content: $fa-var-ambulance
@@ -1200,12 +1200,6 @@ $fa-var-try: "\f195"
 
 %fa-folder-open-o
   content: $fa-var-folder-open-o
-
-%fa-expand-o
-  content: $fa-var-expand-o
-
-%fa-collapse-o
-  content: $fa-var-collapse-o
 
 %fa-smile-o
   content: $fa-var-smile-o
@@ -1321,17 +1315,17 @@ $fa-var-try: "\f195"
 %fa-anchor
   content: $fa-var-anchor
 
-%fa-unlock-o
-  content: $fa-var-unlock-o
+%fa-unlock-alt
+  content: $fa-var-unlock-alt
 
 %fa-bullseye
   content: $fa-var-bullseye
 
-%fa-ellipsis-horizontal
-  content: $fa-var-ellipsis-horizontal
+%fa-ellipsis-h
+  content: $fa-var-ellipsis-h
 
-%fa-ellipsis-vertical
-  content: $fa-var-ellipsis-vertical
+%fa-ellipsis-v
+  content: $fa-var-ellipsis-v
 
 %fa-rss-square
   content: $fa-var-rss-square
@@ -1581,3 +1575,6 @@ $fa-var-try: "\f195"
 %fa-turkish-lira,
 %fa-try
   content: $fa-var-try
+
+%fa-plus-square-o
+  content: $fa-var-plus-square-o
