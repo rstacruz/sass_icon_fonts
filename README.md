@@ -1,3 +1,7 @@
+# Deprecation warning
+
+This project is now no longer maintained in favor of its successor, https://github.com/rstacruz/iconfonts.
+
 Sass icon fonts
 ===============
 
