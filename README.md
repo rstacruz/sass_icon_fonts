@@ -2,7 +2,7 @@
 
 This project is now no longer maintained in favor of its successor, https://github.com/rstacruz/iconfonts.
 
-[!Unmainained](https://img.shields.io/badge/status-unmaintained-red.svg)
+![Unmainained](https://img.shields.io/badge/status-unmaintained-red.svg)
 
 Sass icon fonts
 ===============
